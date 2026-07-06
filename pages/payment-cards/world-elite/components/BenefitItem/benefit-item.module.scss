@@ -3,13 +3,20 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 32px;
+  gap: 40px;
   width: 100%;
-  min-height: 120px;
-  background-color: $BLUE900;
-  border-radius: 16px;
-  padding: 20px 40px;
-  margin-bottom: 20px;
+  min-height: 150px;
+  /* Светлее со стороны иконки (слева), затухает в чёрный к правому краю */
+  background: linear-gradient(
+    90deg,
+    #2c3644 0%,
+    #232b36 30%,
+    #1a2029 60%,
+    #12151a 100%
+  );
+  border-radius: 20px;
+  padding: 24px 48px;
+  margin-bottom: 24px;
   overflow: visible;
 
   @include mobile {
@@ -17,6 +24,7 @@
     gap: 16px;
     min-height: unset;
     flex-wrap: wrap;
+    border-radius: 16px;
   }
 }
 
@@ -24,6 +32,14 @@
   flex-direction: row-reverse;
   justify-content: flex-end;
   text-align: right;
+  /* Иконка справа — зеркалим градиент: светлее справа, темнее слева */
+  background: linear-gradient(
+    270deg,
+    #2c3644 0%,
+    #232b36 30%,
+    #1a2029 60%,
+    #12151a 100%
+  );
 
   .icon {
     margin-top: 0;
@@ -34,6 +50,13 @@
     text-align: left;
     flex-direction: row;
     justify-content: flex-start;
+    background: linear-gradient(
+      90deg,
+      #2c3644 0%,
+      #232b36 30%,
+      #1a2029 60%,
+      #12151a 100%
+    );
 
     .icon {
       margin-bottom: 0;
