@@ -1,0 +1,47 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background-color: $BLUE900;
+  border-radius: 16px;
+  padding: 24px 32px;
+  margin-bottom: 16px;
+
+  @include mobile {
+    padding: 20px;
+    gap: 16px;
+  }
+}
+
+.reverse {
+  flex-direction: row-reverse;
+  text-align: right;
+
+  @include mobile {
+    text-align: left;
+    flex-direction: row;
+  }
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  flex-grow: 1;
+}
+
+.title {
+  color: $WHITE;
+  margin-bottom: 6px;
+}
+
+.desc {
+  color: $BLUE200;
+}

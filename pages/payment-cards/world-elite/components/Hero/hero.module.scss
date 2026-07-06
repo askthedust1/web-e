@@ -1,0 +1,38 @@
+.wrapper {
+  background: linear-gradient(180deg, $BLUE900 0%, $BLACK 100%);
+  padding: 90px 0 60px;
+  text-align: center;
+  position: relative;
+
+  @include mobile {
+    padding: 70px 0 40px;
+  }
+}
+
+.label {
+  color: $BLUE200;
+  margin-bottom: 8px;
+  text-transform: lowercase;
+}
+
+.title {
+  margin: 0;
+  font-weight: 800;
+  font-size: clamp(48px, 8vw, 96px);
+  line-height: 1.05;
+  letter-spacing: 1px;
+  background: linear-gradient(180deg, $WHITE 0%, $BLUE200 60%, $BLUE500 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: $BLUE150;
+  margin-top: 8px;
+  margin-bottom: 32px;
+}
+
+.button {
+  min-width: 200px;
+}
