@@ -2,20 +2,56 @@ import Button from 'components/Buttons/Button'
 import CardsMock from './CardsMock'
 import style from './tariffs-table.module.scss'
 
-const ROWS = [
-  { label: 'Годовое обслуживание', value: '10 000 сом' },
+interface Row {
+  label: string
+  value: React.ReactNode
+}
+
+const ROWS: Row[] = [
+  {
+    label: 'Годовое обслуживание',
+    value: (
+      <>
+        <b>10 000</b> сом
+      </>
+    ),
+  },
   {
     label: 'Снятие наличных',
-    value:
-      'Бесплатное снятие наличных до 200 000 сом в месяц в банкоматах других банков КР. (Снятие свыше 200 000 сом в месяц - 7%, мин. 150 сом)',
+    value: (
+      <>
+        Бесплатное снятие наличных до <b>200 000</b> сом в месяц в банкоматах
+        других банков КР.
+        <br />
+        <i>(Снятие свыше 200 000 сом в месяц - 1%, мин. 150 сом)</i>
+      </>
+    ),
   },
-  { label: 'Переводы в другие банки', value: '1% мин., 150 сом' },
+  {
+    label: 'Переводы в другие банки',
+    value: (
+      <>
+        <b>1%</b> мин., 150 сом
+      </>
+    ),
+  },
   {
     label: 'Кешбэк',
-    value:
-      '2% от суммы, на все безналичные операции по карте в POS-терминалах и интернет-платежи',
+    value: (
+      <>
+        <b>2%</b> от суммы, на все безналичные операции по карте в POS-терминалах
+        и интернет-платежи
+      </>
+    ),
   },
-  { label: 'Срок действия', value: '5 лет' },
+  {
+    label: 'Срок действия',
+    value: (
+      <>
+        <b>5</b> лет
+      </>
+    ),
+  },
 ]
 
 const TariffsTable = () => {
@@ -23,11 +59,11 @@ const TariffsTable = () => {
     <div className={style.wrapper}>
       <p className={`medium-32 ${style.title}`}>Тарифы Visa Infinite</p>
       <div className={style.content}>
-        <div className={style.tableWrap}>
+        <div className={style.table}>
           {ROWS.map((row) => (
             <div className={style.row} key={row.label}>
-              <p className={`medium-16 ${style.label}`}>{row.label}</p>
-              <p className={`regular-15 ${style.value}`}>{row.value}</p>
+              <div className={`medium-16 ${style.labelCell}`}>{row.label}</div>
+              <div className={`regular-15 ${style.valueCell}`}>{row.value}</div>
             </div>
           ))}
         </div>

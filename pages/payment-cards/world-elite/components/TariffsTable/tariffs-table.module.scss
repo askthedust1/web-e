@@ -10,60 +10,98 @@
 .title {
   color: $WHITE;
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
+
+  @include mobile {
+    margin-bottom: 24px;
+  }
 }
 
 .content {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 48px;
 
   @include tablet {
     flex-direction: column;
+    gap: 32px;
   }
 }
 
-.tableWrap {
-  flex: 1 1 60%;
-  background-color: $BLUE900;
-  border-radius: 16px;
-  overflow: hidden;
+.table {
+  flex: 1 1 58%;
   width: 100%;
 }
 
 .row {
   display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 20px 24px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-
-  &:last-child {
-    border-bottom: none;
-  }
+  align-items: stretch;
+  gap: 40px;
 
   @include mobile {
-    flex-direction: column;
-    gap: 4px;
+    gap: 20px;
   }
 }
 
-.label {
-  color: $BLUE200;
-  flex: 0 0 40%;
-}
-
-.value {
+/* Левая колонка — единая скруглённая сине-серая панель */
+.labelCell {
+  flex: 0 0 34%;
+  display: flex;
+  align-items: center;
+  background-color: #29323f;
   color: $WHITE;
-  text-align: right;
+  padding: 22px 28px;
 
   @include mobile {
-    text-align: left;
+    flex-basis: 40%;
+    padding: 16px;
   }
+}
+
+.row:first-child .labelCell {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.row:last-child .labelCell {
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+/* Правая колонка — на чёрном фоне, разделители между строками */
+.valueCell {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $BLUE150;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+  b {
+    color: $WHITE;
+    font-weight: 700;
+  }
+
+  i {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 14px;
+    font-style: italic;
+    color: $BLUE200;
+  }
+
+  @include mobile {
+    padding: 16px 0;
+  }
+}
+
+.row:last-child .valueCell {
+  border-bottom: none;
 }
 
 .cardsImage {
-  flex: 1 1 40%;
+  flex: 1 1 42%;
   display: flex;
   justify-content: center;
 
@@ -74,5 +112,5 @@
 
 .actions {
   text-align: center;
-  margin-top: 32px;
+  margin-top: 40px;
 }
