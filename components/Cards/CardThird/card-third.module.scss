@@ -1,0 +1,38 @@
+.card {
+  padding: 30px 24px;
+  background: var(--WHITE);
+  box-shadow: $SHADOW_2;
+  border-radius: 12px;
+  height: 100%;
+  position: relative;
+  transition: 0.6s ease;
+  cursor: pointer;
+  &:hover {
+    -moz-transform: translate(5px, -14px);
+    -webkit-transform: translate(5px, -14px);
+    -o-transform: translate(5px, -14px);
+    -ms-transform: translate(5px, -14px);
+    transform: translate(5px, -14px);
+  }
+}
+.link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+.image {
+  margin-bottom: 20px;
+}
+.title {
+  color: $BLACK;
+  margin-bottom: 8px;
+}
+.desc {
+  color: var(--BLUE500);
+}
+.img {
+  object-fit: scale-down;
+}

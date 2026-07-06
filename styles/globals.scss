@@ -1,0 +1,110 @@
+@import './vars/temp.scss';
+@import 'normalize-css';
+@import './assets/fonts/MuseoSans/stylesheet';
+@import './assets/fonts/Montserrat/stylesheet';
+@import './themes.scss';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Museo Sans Cyrl 300', sans-serif !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+select,
+input,
+button {
+  font-family: 'Museo Sans Cyrl 300', sans-serif;
+}
+
+/* Keyboard focus indicator — visible only for keyboard navigation, not mouse */
+*:focus {
+  outline: none;
+}
+*:focus-visible {
+  outline: 2px solid var(--BLUE);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.custom-slider {
+  width: 100%;
+  height: 2px;
+  position: relative;
+}
+
+.custom-track {
+  top: 0;
+  bottom: 0;
+  background: #d3d3d3;
+  border-radius: 5px;
+}
+
+.custom-track.custom-track-0 {
+  background: #0a367e;
+}
+
+.custom-track.custom-track-1 {
+  background: #d1d0d0;
+}
+
+.custom-thumb {
+  // height: 25px;
+  // width: 25px;
+  padding: 5px;
+  background-color: #0a367e;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: grab;
+  color: #fff;
+  font-size: 10px;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  top: -6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-thumb:hover {
+  transform: scale(1.2);
+  background-color: #0a367e;
+}
+
+.custom-thumb:active {
+  cursor: grabbing;
+}
+
+.custom-value {
+  position: absolute;
+  top: 30px;
+  font-size: 16px;
+  color: #333;
+}
+
+.example-mark { 
+  width: 5px; 
+  height: 5px; 
+  background-color: #2d2d2d; 
+ 
+  border-radius: 50%; 
+  cursor: grab; 
+  color: #fff; 
+  font-size: 10px; 
+  transition: transform 0.2s ease; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  top: -1.5px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}

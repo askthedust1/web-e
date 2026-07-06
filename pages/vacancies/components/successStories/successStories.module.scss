@@ -1,0 +1,95 @@
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #1E1E62;
+
+  @media (max-width: 960px) {
+    font-size: 24px;
+  }
+}
+
+.successSection {
+  margin-top: 80px;
+  position: relative;
+
+  @media (max-width: 960px) {
+    margin-top: 40px;
+  }
+}
+
+.newsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.rowCards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+
+  @media (min-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    gap: 24px;
+  }
+}
+
+.largeCard,
+.smallCard {
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.largeCard:hover,
+.smallCard:hover {
+  transform: translateY(-5px);
+}
+
+.imageWrapperLarge {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.imageWrapperSmall {
+  position: relative;
+  width: 100%;
+  //height: 160px;
+  aspect-ratio: 16 / 9;
+
+  @media (max-width: 480px) {
+    //height: 140px;
+  }
+}
+
+.largeCard h3,
+.smallCard h4 {
+  padding: 16px;
+  font-size: 16px;
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
+}
+

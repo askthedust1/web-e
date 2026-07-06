@@ -1,0 +1,113 @@
+.block {
+  min-width: 100%;
+  height: 64px;
+  border-radius: 8px;
+  background: $BLUE30;
+  border: none;
+  margin: 11px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  @media (max-width: 640px) {
+    height: 48px;
+  }
+
+  .disabled {
+    opacity: 0.8;
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 48%;
+  @media (max-width: 640px) {
+    margin: 0;
+  }
+}
+.input {
+  opacity: 0.8; 
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid $BLUE150;
+  background: $BLUE30;
+  width: 100%;
+  height: 100%;
+  padding: 10px 16px;
+  color: $TEXT600;
+
+  &::placeholder {
+    color: $TEXT600;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $TEXT600;
+  }
+
+  &::-ms-input-placeholder {
+    color: $TEXT600;
+  }
+  @media (max-width: 640px) {
+    font-size: 14px !important;
+    line-height: 24px;
+  }
+}
+.isHalf {
+  min-width: 48%;
+  margin-right: 20px;
+}
+.isSmall {
+  min-width: 28%;
+}
+.error {
+  margin-bottom: 15px;
+  color: $RED;
+}
+.input:focus {
+  border: 1px solid $BLUE;
+  background-color: $WHITE;
+  outline: none !important;
+  border: 1px solid $BLUE;
+}
+.input[type='number']::-webkit-outer-spin-button,
+.input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input[type='number'] {
+  -moz-appearance: textfield;
+}
+.massage {
+  padding-left: 20px;
+  color: $TEXT400;
+  margin-bottom: 15px;
+}
+
+.labelTop {
+  z-index: 15;
+  color: var(--BLUE);
+  position: absolute;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 3px 16px;
+  @media (max-width: 960px) {
+    font-size: 8px;
+    padding: 1px 16px;
+  }
+}
+.showPassword {
+  position: absolute;
+  z-index: 20;
+  right: 15px;
+  bottom: 20px;
+  cursor: pointer;
+  color: $BLACK;
+  &.active {
+    color: var(--BLUE);
+  }
+  @media (max-width: 640px) {
+    bottom: 13px;
+  }
+}

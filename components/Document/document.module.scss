@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: $BLUE;
+  text-decoration: none;
+  background: $BLUE10;
+  border: 1px solid $NEUTRAL_400;
+  border-radius: 10px;
+  padding: 14px 20px;
+  margin-bottom: 10px;
+  transition: background 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+
+  &:hover {
+    background: $NEUTRAL_500;
+    border-color: $BLUE150;
+    box-shadow: 0 2px 8px rgba(21, 108, 230, 0.08);
+  }
+
+  .icon {
+    flex-shrink: 0;
+  }
+}

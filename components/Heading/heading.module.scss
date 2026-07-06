@@ -1,0 +1,64 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    margin-bottom: 20px;
+  }
+}
+.title {
+  color: $BLACK;
+  display: flex;
+  align-items: center;
+  position: relative;
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+.more {
+  display: flex;
+  align-items: center;
+  color: var(--BLUE);
+  margin-left: 24px;
+  text-decoration: none;
+  .icon {
+    margin-left: 4px;
+  }
+  @media (max-width: 500px) {
+    position: absolute;
+    top: -19px;
+    left: -23px;
+  }
+}
+.arrows {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 12px;
+}
+.arrow {
+  border: 1px solid var(--BLUE);
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--BLUE);
+  &:hover {
+    background-color: var(--BLUE);
+    color: #fff;
+  }
+}
+
+.message {
+  position: absolute;
+  bottom: -25px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: $TEXT600;
+}

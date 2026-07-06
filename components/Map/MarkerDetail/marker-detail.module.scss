@@ -1,0 +1,60 @@
+.container {
+  max-width: 334px;
+  max-height: 500px;
+
+  p {
+    margin: 2px 0 !important;
+  }
+}
+.scroller {
+  max-height: 120px;
+  overflow-y: scroll;
+}
+.wrapper {
+  border-bottom: 3px solid var(--BLUE25);
+}
+.title {
+  margin-bottom: 15px;
+}
+.li {
+  display: flex;
+  align-items: center;
+  color: $TEXT600;
+  margin-bottom: 15px;
+}
+.isClosed {
+  color: $RED;
+}
+.isOpen {
+  color: $GREEN;
+}
+.icon {
+  margin-right: 12px;
+}
+.subtitle {
+  margin: 15px 0 12px;
+  font-weight: 600;
+  color: $BLACK;
+}
+.liTime {
+  color: $TEXT600;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.scroll {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  color: var(--BLUE);
+}
+.scrollIcon {
+  margin-left: 5px;
+}
+
+.markerHovered {
+  filter: drop-shadow(0 0 8px rgba(8, 255, 27, 0.7));
+  transform: scale(1.2);
+  //transition: all 0.2s ease;
+  z-index: 1000 !important;
+}

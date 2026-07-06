@@ -1,0 +1,25 @@
+.greenHeader {
+  background: linear-gradient(135deg, #00a870 0%, #007a52 100%);
+  padding: 48px 0 40px;
+  margin-bottom: 8px;
+}
+
+.greenHeaderTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: $WHITE;
+  margin: 0 0 12px 0;
+  line-height: 1.25;
+
+  @media (max-width: 640px) {
+    font-size: 24px;
+  }
+}
+
+.greenHeaderDesc {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  max-width: 680px;
+  line-height: 1.6;
+}

@@ -1,0 +1,379 @@
+.vacancyBlock {
+  position: relative;
+}
+
+.vacancyHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .moreBtn {
+    display: inline-block;
+    text-decoration: none;
+    color: #1E1E62;
+    cursor: pointer;
+    border: 3px solid $BLUE;
+    padding: 10px;
+    border-radius: 20px;
+
+    @media (max-width: 960px) {
+      display: none;
+    }
+  }
+}
+
+.header {
+  @media (max-width: 960px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
+
+.mobileMore {
+  display: none;
+  .moreBtn {
+    display: inline-block;
+    text-decoration: none;
+    color: #1E1E62;
+    cursor: pointer;
+    border: 3px solid $BLUE;
+    padding: 10px;
+    border-radius: 20px;
+
+    @media (max-width: 960px) {
+      border: 2px solid $BLUE;
+      padding: 8px;
+    }
+
+  }
+
+  @media (max-width: 960px) {
+    display: block;
+  }
+}
+
+.swiperFree {
+  margin-left: calc(-50vw + 614px);
+  margin-right: calc(-50vw + 614px);
+  padding-left: calc(50vw - 614px);
+  padding-right: calc(50vw - 614px);
+
+  :global(.swiper-scrollbar) {
+    position: static;
+    margin: 37px auto 30px auto;
+    border-radius: 36px;
+    background-color: #f3f3f3;
+    width: 164px !important;
+    height: 5px !important;
+    left: 50% !important;
+    bottom: -25px !important;
+
+    @media (max-width: 960px) {
+     display: none;
+    }
+  }
+
+  :global(.swiper-scrollbar-drag) {
+    border-radius: 20px;
+    background-color: #0262ed;
+    //box-shadow: 0 4px 22px rgba(255, 86, 127, .34);
+    transition-duration: .3s;
+    height: 8px;
+    position: relative;
+    top: -2px;
+    cursor: pointer;
+    width: 80.9976px !important;
+  }
+
+  @media (max-width: 1024px) {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #1E1E62;
+
+  @media (max-width: 960px) {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tabButton {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  background-color: transparent;
+  cursor: pointer;
+
+  &.active {
+    background-color: #2563eb;
+    color: white;
+  }
+
+  &:not(.active):hover {
+    background-color: #bfdbfe;
+  }
+}
+
+.tabsMore {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #2563eb;
+  border-radius: 9999px;
+  padding: 0 10px;
+  background: none;
+  color: #2563eb;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    //text-decoration: underline;
+  }
+}
+
+.cardColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+
+.tallSlide {
+  display: flex;
+  align-items: stretch;
+}
+
+.tallCard {
+  height: 100%;
+}
+
+.swiperSlide {
+  padding: 1.5rem 0;
+  border-radius: 1.5rem;
+  //color: white;
+  min-height: 220px;
+  height: 600px!important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.location {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+.icon {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  margin-left: auto;
+}
+
+.swiperSlide {
+  height: 632px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: 960px) {
+    height: 532px!important;
+  }
+}
+
+.cardColumn {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+}
+
+.cardColumn .vacancyCard {
+  flex: 1;
+}
+
+.tallCard {
+  height: 100%;
+}
+
+.vacancyCard {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+  }
+
+  .location {
+    font-size: 20px;
+    color: $WHITE;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    @media (max-width: 960px) {
+      font-size: 16px;
+    }
+  }
+
+  .titleText {
+    max-width: 350px;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 30px;
+    z-index: 99;
+    position: absolute;
+    color: white;
+
+    @media (max-width: 960px) {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
+}
+
+
+.swiperWrapper {
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-swiper-scrollbar {
+  width: 300px;
+  height: 6px;
+  margin-top: 12px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+
+  .swiper-scrollbar-drag {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+  }
+}
+
+.cardIcon {
+  position: absolute;
+  z-index: 0;
+  bottom: 15px;
+  width: 230px;
+  height: 230px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: auto;
+  align-self: flex-end;
+
+  @media (max-width: 960px) {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+.cardIconTall {
+  position: absolute;
+  z-index: 0;
+  bottom: 15px;
+  right: 50px;
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @media (max-width: 960px) {
+    right: 10px;
+    width: 230px;
+    height: 230px;
+  }
+}
+
+.cardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  height: 100%;
+}
+
+.locationIcon {
+  color: white;
+  display: inline-block;
+}
+
+.noVacancies {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  p {
+    text-align: center;
+  }
+}
+
+.tabsWrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 -16px;
+  padding: 0 16px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  min-width: max-content;
+}
+
+.tabButton {
+  white-space: nowrap;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  transition: background 0.3s;
+
+  &.active {
+    background: #2b79ee;
+    color: white;
+  }
+}

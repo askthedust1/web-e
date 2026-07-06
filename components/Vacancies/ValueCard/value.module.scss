@@ -1,0 +1,205 @@
+.valuesContainer {
+  position: relative;
+  margin: 100px 0;
+
+
+  @media (max-width: 768px) {
+    margin: 50px 0;
+  }
+}
+
+.valuesHeader {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #1E1E62;
+
+  @media (max-width: 960px) {
+    font-size: 24px;
+  }
+}
+
+.desktopLayout {
+  display: grid;
+  gap: 10px;
+
+  @media (max-width: 1200px) {
+    display: block;
+  }
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.valuesGrid {
+  display: flex;
+  gap: 10px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.valueCard {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  border-radius: 20px;
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+  background-color: transparent;
+  overflow: hidden;
+
+  @media (max-width: 560px) {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+  }
+
+  @media (min-width: 768px) {
+    &:hover .faceFront {
+      transform: rotateY(-180deg);
+    }
+
+    &:hover .faceBack {
+      transform: rotateY(0deg);
+    }
+  }
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 560px) {
+    position: inherit;
+  }
+
+  @media (min-width: 768px) {
+    backface-visibility: hidden;
+    transition: transform 0.6s ease;
+  }
+}
+
+.faceFront {
+  background-color: rgba(179, 223, 255, 0.3);
+  transform: rotateY(0deg);
+  z-index: 2;
+
+  @media (max-width: 767px) {
+    background-color: transparent;
+  }
+}
+
+.faceBack {
+  background-color: rgba(179, 223, 255, 0.3);
+  color: #1d246c;
+  transform: rotateY(180deg);
+  z-index: 1;
+
+  @media (max-width: 767px) {
+    position: static;
+    transform: none;
+    background: none;
+    padding-top: 0;
+  }
+}
+
+.valueTitle {
+  font-size: 1.4rem;
+  margin-top: 15px;
+  color: #1d246c;
+  text-align: center;
+}
+
+.valueDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1d246c;
+  text-align: center;
+}
+
+.imageWrapper {
+  width: auto;
+  height: auto;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sliderWrapper {
+  position: relative;
+
+  .swiper {
+    padding: 0 40px;
+  }
+}
+
+.highlighted {
+  .faceFront,
+  .faceBack {
+    background: linear-gradient(145deg, rgba(105, 200, 251, 0.6), rgba(74, 224, 147, 0.6));
+    @media (max-width: 767px) {
+      position: static;
+      transform: none;
+      background: none;
+      padding-top: 0;
+    }
+  }
+
+  .valueTitle,
+  .valueDescription {
+    color: #1d246c;
+  }
+}
+
+.navPrev,
+.navNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #1d246c;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.navPrev {
+  left: 10px;
+}
+
+.navNext {
+  right: 10px;
+}
+
+.navPrev:hover,
+.navNext:hover {
+  background-color: rgba(255, 255, 255, 1);
+}

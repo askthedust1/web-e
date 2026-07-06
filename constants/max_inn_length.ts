@@ -1,0 +1,1 @@
+export const MAX_INN_LENGTH = 14

@@ -1,0 +1,263 @@
+@import './vars/temp.scss';
+body,
+body[data-theme='light'] {
+  --WHITE: #{$WHITE};
+  --BLUE10: #{$BLUE10};
+  --BLUE: #{$BLUE};
+  --BLUE_HOVER: #{$BLUE_HOVER};
+  --BLUE_BRAND_DARK: #{$BLUE_BRAND_DARK};
+  --BLUE_SKY: #{$BLUE_SKY};
+  --HERO_GRADIENT: #{$HERO_GRADIENT};
+  --BLUE25: #{$BLUE25};
+  --BLUE30: #{$BLUE30};
+  --BLUE150: #{$BLUE150};
+  --BLUE200: #{$BLUE200};
+  --BLUE300: #{$BLUE300};
+  --BLUE400: #{$BLUE400};
+  --BLUE500: #{$BLUE500};
+  --BLUE700: #{$BLUE700};
+  --BLUE900: #{$BLUE900};
+  --TEXT10: #{$TEXT10};
+  --TEXT50: #{$TEXT50};
+  --TEXT400: #{$TEXT400};
+  --TEXT600: #{$TEXT600};
+  --RED: #{$RED};
+  --GREEN: #{$GREEN};
+  --YELLOW: #{$YELLOW};
+  --YELLOW_HOVER: #{$YELLOW_HOVER};
+}
+
+body[data-theme='dark'] {
+  --WHITE: #{$WHITE};
+  --BLUE10: #{$BLUE10};
+  --BLUE: #{$BLACK};
+  --BLUE_HOVER: #{$WHITE};
+  --BLUE25: #{$BLACK};
+  --BLUE30: #{$BLUE30};
+  --BLUE150: #{$BLACK};
+  --BLUE200: #{$BLACK};
+  --BLUE300: #{$BLACK};
+  --BLUE400: #{$BLACK};
+  --BLUE500: #{$BLACK};
+  --BLUE700: #{$BLACK};
+  --BLUE900: #{$BLACK};
+  --TEXT10: #{$WHITE};
+  --TEXT50: #{$WHITE};
+  --TEXT400: #{$BLACK};
+  --TEXT600: #{$BLACK};
+  --RED: #{$BLACK};
+  --GREEN: #{$BLACK};
+  --YELLOW: #{$WHITE};
+  --YELLOW_HOVER: #{$WHITE};
+  //fonts
+  .light-12 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+    color: $BLACK;
+  }
+  .light-14 {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 32px;
+    background-color: $WHITE;
+    color: $BLACK;
+  }
+
+  .light-16 {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 32px;
+    color: $BLACK;
+    @media (max-width: 640px) {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 10px;
+      color: $BLACK;
+    }
+  }
+  // !
+  .light-18 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 32px;
+  }
+  // !
+  .regular-12 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 16px;
+  }
+  .regular-15 {
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 34px;
+    color: $BLACK;
+  }
+  .regular-16 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 35px;
+    color: $BLACK;
+  }
+
+  .regular-18 {
+    font-weight: 700;
+    color: $BLACK;
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .regular-20 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 32px;
+    color: $BLACK;
+  }
+  //!
+  .regular-32 {
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 40px;
+  }
+  // !
+  .regular-40 {
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 0.2px;
+  }
+  // !
+  .medium-12 {
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 20px;
+  }
+  // !
+  .medium-15 {
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 24px;
+  }
+  .medium-16 {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 36px;
+    color: $BLACK;
+  }
+
+  .medium-18 {
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 34px;
+    word-break: break-all;
+  }
+
+  .medium-20 {
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 32px;
+  }
+  // !
+  .medium-28 {
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 36px;
+  }
+
+  .medium-32 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  // !
+  .medium-40 {
+    font-weight: 800;
+    font-size: 52px;
+    line-height: 56px;
+  }
+  // !
+  .medium-42 {
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 48px;
+  }
+  .regular-14 {
+    margin-top: 10px;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 32px;
+  }
+  img {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(100%);
+  }
+  .color-white {
+    color: $WHITE;
+  }
+  .color-white-hover {
+    &:hover {
+      color: $WHITE;
+    }
+  }
+  .bg-white {
+    color: $WHITE;
+  }
+  .bg-black {
+    background-color: $BLACK;
+  }
+  .g-t-60 {
+    grid-template-columns: 65px auto;
+  }
+  .forVisual {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 22px;
+    color: $BLACK;
+    span {
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 22px;
+      color: $BLACK;
+    }
+    p {
+      font-weight: 300;
+      font-size: 28px;
+      line-height: 30px;
+      color: $BLACK;
+    }
+    strong {
+      font-weight: 700;
+    }
+    ul {
+      li {
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 44px;
+        color: $BLACK;
+      }
+    }
+  }
+  .border-black {
+    border: 1px solid var(--BLUE);
+    border-radius: 9px;
+  }
+
+  .height-150 {
+    height: 80px;
+  }
+  .bottom-35 {
+    bottom: -35px;
+  }
+  .top-0 {
+    top: 0;
+  }
+  .m-t-25 {
+    margin-top: 25px;
+  }
+  .m-5 {
+    margin: 5px;
+  }
+  .bottom-0 {
+    bottom: 0;
+  }
+}

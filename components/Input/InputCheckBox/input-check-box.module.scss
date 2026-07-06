@@ -1,0 +1,49 @@
+.checkbox {
+  margin-right: 15px;
+  cursor: pointer;
+}
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 25px;
+}
+
+.activeCheckbox {
+  color: var(--BLUE);
+}
+
+.defaultCheckbox {
+  color: $TEXT400;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.checkbox[type='radio'],
+.checkbox[type='checkbox'] {
+  display: none;
+}
+.error {
+  color: $RED;
+}
+.component {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  padding: 20px 0;
+  cursor: pointer;
+}
+.iconWrapper {
+  border-radius: 6px;
+  border: 1px solid var(--YELLOW);
+  margin-right: 10px;
+  cursor: pointer;
+}
+.active {
+  background-color: #bcc4d0;
+  border-radius: 5px;
+  border: none;
+}
+.label {
+  font-weight: 700;
+  cursor: pointer;
+}

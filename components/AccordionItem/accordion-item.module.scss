@@ -1,0 +1,45 @@
+.wrapper {
+  background: $WHITE;
+  box-shadow: 0 0 40px rgba(75, 91, 118, 0.1);
+  border-radius: 8px;
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+.active {
+  .icon {
+    color: $TEXT400;
+  }
+}
+.head {
+  padding: 24px 62px 24px 24px;
+  position: relative;
+  cursor: pointer;
+}
+.body {
+  padding: 0 24px 24px 44px;
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: $TEXT600;
+    margin: 0 0 10px 0;
+    > img {
+      width: 100%!important;
+      height: 100%!important;
+    }
+    > span > span > span > span {
+      > img {
+        width: 100%!important;
+        height: 100%!important;
+      }
+    }
+  }
+}
+.icon {
+  color: $BLUE;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 24px;
+}

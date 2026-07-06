@@ -1,0 +1,14 @@
+.section{
+  overflow: hidden;
+  margin-bottom: 0;
+  padding-bottom: 60px;
+  :global{
+    .swiper{
+      overflow: visible;
+    }
+    .swiper-slide{
+      height: auto;
+      flex-grow: 3;
+    }
+  }
+}

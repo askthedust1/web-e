@@ -1,0 +1,27 @@
+.drawerContent {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.header {
+  padding: 15px;
+  background: #22222233;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  height: 60px;
+  z-index: 100;
+}
+
+.drawerBody {
+  background-color: #f9f9f9;
+}
+
+.button {
+  height: 40px;
+  font-size: 14px;
+  background-color: rgba(195, 56, 56, 0.64);
+}

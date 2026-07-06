@@ -1,0 +1,144 @@
+.wrapper {
+  position: relative;
+  padding: 38px 0;
+  background: linear-gradient(135deg, #0f52be 0%, #156ce6 60%, #73d0f6 100%);
+  @media (max-width: 960px) {
+    margin: 8px auto 0;
+    width: 90%;
+    border-radius: 12px;
+    height: 100%;
+    position: relative;
+    height: 100%;
+    margin-bottom: 15px;
+  }
+}
+.grid {
+  position: relative;
+  z-index: 14;
+  min-height: 480px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 60px;
+  align-items: center;
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0px 25px;
+    min-height: 280px;
+    grid-gap: 15px;
+  }
+}
+.gridApps {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+}
+.app__link {
+  margin-right: 5px;
+}
+.badge {
+  height: 24px;
+  padding: 0 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $RED;
+  border-radius: 4px;
+  color: $WHITE;
+  margin-bottom: 4px;
+}
+.title {
+  color: $WHITE;
+  margin: 0 0 16px 0;
+  @media (max-width: 960px) {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+.button {
+  margin-top: 40px;
+  @media (max-width: 960px) {
+    display: none;
+    font-size: 12px;
+  }
+}
+
+.buttonStyle {
+  text-align: center;
+  width: 40%;
+  @media (max-width: 960px) {
+    font-size: 12px;
+    width: 80%;
+  }
+}
+.buttonMboile {
+  font-size: 14px;
+  font-weight: 700;
+  @media (min-width: 960px) {
+    display: none;
+  }
+}
+.img {
+  // display: flex;
+  // justify-content: center;
+  object-fit: scale-down;
+  text-align: center;
+  transition: 0.6s ease;
+  cursor: pointer;
+  &:hover {
+    -moz-transform: translate(0px, -5px);
+    -webkit-transform: translate(0px, -5px);
+    -o-transform: translate(0px, -5px);
+    -ms-transform: translate(0px, -5px);
+    transform: translate(0px, -5px);
+  }
+}
+
+.bannerList {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #333;
+  font-size: 18px;
+  line-height: 1.6;
+
+  li {
+    margin-bottom: 8px;
+  }
+}
+
+.mobile_button {
+  display: none;
+  @media (max-width: 960px) {
+    display: flex;
+  }
+}
+.subtitle {
+  * {
+    color: currentColor !important;
+  }
+  @media (max-width: 960px) {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.desc {
+  // @media (max-width: 960px) {
+  //   display: none;
+  // }
+}
+
+.mob {
+  @media (min-width: 960px) {
+    display: none;
+  }
+}
+
+.mobImg {
+  border-radius: 16px;
+}
+
+.bgImg {
+  z-index: 12;
+}

@@ -1,0 +1,365 @@
+.container {
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: $BREAK_POINT_SIZE) {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkboxBlock {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  gap: 12px;
+
+  // Стили для чекбоксов с подложкой
+  :global {
+    .input-checkbox {
+      &__content {
+        padding: 16px;
+        background: $NEUTRAL_100;
+        border-radius: 8px;
+        border: 1px solid #e9ecef;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background: #f1f3f4;
+          border-color: #d0d7e2;
+        }
+      }
+
+      input:checked + .input-checkbox__content {
+        background: #f0f7ff;
+        border-color: $BLUE;
+        box-shadow: 0 0 0 1px rgba($BLUE, 0.1);
+      }
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+
+  @media (max-width: $BREAK_POINT_SIZE) {
+    margin-top: 12px;
+  }
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ebedf1;
+}
+
+.info {
+  margin: 32px 0;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  border-top: 1px solid $BLUE30;
+  padding-top: 32px;
+}
+
+.button {
+  max-width: 173px;
+
+  @media (max-width: $BREAK_POINT_SIZE) {
+    min-width: 100%;
+  }
+}
+
+.title {
+  width: 60%;
+}
+
+.link {
+  color: var(--BLUE);
+  text-decoration: none;
+}
+
+.part {
+  max-width: 50%;
+
+  @media (max-width: $BREAK_POINT_SIZE) {
+    max-width: 100%;
+  }
+
+  &:first-child {
+    padding-right: 40px;
+
+    @media (max-width: $BREAK_POINT_SIZE) {
+      padding-right: 0;
+    }
+  }
+}
+
+.section {
+  margin-top: 20px;
+}
+
+.subtitle {
+  margin-bottom: 15px;
+  color: #2d3748;
+  font-weight: 600;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.buttonWrapper {
+  margin: 20px;
+}
+
+// Стили для подложки элементов формы
+.formElement {
+  background: rgba(240, 245, 255, 0.6);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(180, 200, 255, 0.5);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(235, 242, 255, 0.7);
+    border-color: rgba(150, 180, 255, 0.6);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $BREAK_POINT_SIZE) {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+.cardSelectWrapper {
+  @extend .formElement;
+
+  :global {
+    .rsk-select-img {
+      &__wrapper {
+        background: white;
+        border-radius: 8px;
+        padding: 12px;
+        border: 1px solid #dee2e6;
+      }
+
+      &__selected {
+        background: #f0f7ff;
+        border-color: $BLUE;
+      }
+    }
+  }
+}
+
+// Подложка для радиокнопок (выбор валюты)
+.radioBlock {
+  @extend .formElement;
+
+  :global {
+    .input-radio {
+      &__content {
+        padding: 16px;
+        background: white;
+        border-radius: 8px;
+        border: 1px solid #dee2e6;
+        margin-bottom: 8px;
+        transition: all 0.2s ease;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:hover {
+          background: $NEUTRAL_100;
+          border-color: #d0d7e2;
+        }
+      }
+
+      input:checked + .input-radio__content {
+        background: #f0f7ff;
+        border-color: $BLUE;
+        box-shadow: 0 0 0 1px rgba($BLUE, 0.1);
+      }
+    }
+  }
+}
+
+// Подложка для чекбоксов (дополнительные услуги)
+.checkboxWrapper {
+  @extend .formElement;
+}
+
+// Стили для заголовков внутри подложек
+.formElementTitle {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d3748;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 16px;
+    background: $BLUE;
+    border-radius: 2px;
+    margin-right: 10px;
+  }
+}
+
+// Контейнер для карты и зон доставки (одинаковый размер с CardInfoBig)
+.deliveryContainer {
+  padding: 40px;
+  max-width: 480px;
+  min-height: 620px;
+  background: $WHITE;
+  box-shadow: $SHADOW_2;
+  border-radius: 16px;
+  margin-left: 135px;
+  margin-top: 24px; // Отступ между CardInfoBig и картой
+
+  @media (max-width: 1200px) {
+    margin-left: 10%;
+  }
+
+  @media (max-width: 960px) {
+    margin: 24px auto;
+    padding: 20px 16px;
+    max-width: 100%;
+    min-height: auto;
+  }
+}
+
+// Стили для изображения
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+// Стили для зон доставки
+.deliveryZones {
+  margin-top: 24px;
+  padding: 20px;
+  background: $NEUTRAL_100;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+
+  @media (max-width: 960px) {
+    padding: 16px;
+  }
+}
+
+.deliveryTitle {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #212529;
+
+  @media (max-width: 960px) {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+}
+
+.zonesList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.zoneItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+
+  @media (max-width: 960px) {
+    padding: 6px 0;
+    gap: 8px;
+  }
+}
+
+.zoneColor {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 960px) {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.zoneName {
+  font-weight: 600;
+  color: #212529;
+  min-width: 60px;
+
+  @media (max-width: 960px) {
+    min-width: 55px;
+    font-size: 14px;
+  }
+}
+
+.zonePrice {
+  color: #495057;
+  font-weight: 500;
+
+  @media (max-width: 960px) {
+    font-size: 14px;
+  }
+}
+
+.deliveryNote {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed #dee2e6;
+  color: #6c757d;
+  font-size: 14px;
+  font-style: italic;
+
+  @media (max-width: 960px) {
+    font-size: 13px;
+    margin-top: 12px;
+    padding-top: 12px;
+  }
+}
+
+// Адаптивные стили
+@media (max-width: 768px) {
+  .deliveryContainer {
+    margin-top: 16px;
+  }
+
+  .formElement {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .formElementTitle {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+}

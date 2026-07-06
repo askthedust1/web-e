@@ -1,0 +1,347 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #e8eaf6 0%, #f5f5f5 50%, #e3f2fd 100%);
+  padding: 16px;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ─── Card ─── */
+.card {
+  width: 100%;
+  max-width: 520px;
+  background: $WHITE;
+  border-radius: 16px;
+  box-shadow:
+    0 4px 24px rgba(13, 71, 161, 0.08),
+    0 1px 4px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+/* ─── Header ─── */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 28px;
+  border-bottom: 1px solid #eceff1;
+}
+
+.headerLogo {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0d47a1;
+  letter-spacing: 0.5px;
+}
+
+/* ─── Intro ─── */
+.introBody {
+  padding: 32px 28px 40px;
+}
+
+.introTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 16px;
+  line-height: 1.35;
+}
+
+.introDesc {
+  font-size: 15px;
+  color: #455a64;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.introNote {
+  font-size: 14px;
+  color: #78909c;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+/* ─── Progress ─── */
+.progressWrapper {
+  padding: 20px 28px 0;
+}
+
+.progressTrack {
+  width: 100%;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: #0d47a1;
+  border-radius: 2px;
+  transition: width 0.35s ease;
+}
+
+.progressMeta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.progressLabel {
+  font-size: 12px;
+  color: #90a4ae;
+}
+
+.optionalLabel {
+  font-size: 12px;
+  color: #b0bec5;
+  font-style: italic;
+}
+
+/* ─── Question Body ─── */
+.questionBody {
+  padding: 16px 28px 28px;
+  min-height: 280px;
+}
+
+.questionTitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: #263238;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.questionHint {
+  font-size: 13px;
+  color: #78909c;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.errorText {
+  color: #c62828;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+/* ─── Radio Group ─── */
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 2px solid #e0e0e0;
+  background: #fafafa;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #263238;
+}
+
+.radioLabel:hover {
+  border-color: #90caf9;
+  background: #f5f9ff;
+}
+
+.radioLabelSelected {
+  border-color: #0d47a1;
+  background: #e3f2fd;
+}
+
+.radioCircle {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 50%;
+  border: 2px solid #b0bec5;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.radioCircleSelected {
+  border-color: #0d47a1;
+  background: #0d47a1;
+}
+
+.radioCircleDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+/* ─── Star Rating ─── */
+.starGroup {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.starBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  transition: transform 0.15s;
+}
+
+.starBtn:hover {
+  transform: scale(1.15);
+}
+
+.starBtnActive {
+  transform: scale(1.15);
+}
+
+.starValue {
+  margin-left: 8px;
+  font-size: 14px;
+  color: #546e7a;
+}
+
+/* ─── Textarea & Input ─── */
+.textarea {
+  width: 100%;
+  margin-top: 16px;
+  padding: 14px 16px;
+  font-size: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  resize: vertical;
+  outline: none;
+  color: #263238;
+  background: #fafafa;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+
+.textarea:focus {
+  border-color: #0d47a1;
+}
+
+.input {
+  width: 100%;
+  margin-top: 16px;
+  padding: 14px 16px;
+  font-size: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  outline: none;
+  color: #263238;
+  background: #fafafa;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+
+.input:focus {
+  border-color: #0d47a1;
+}
+
+/* ─── Footer ─── */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 28px 24px;
+  border-top: 1px solid #eceff1;
+}
+
+/* ─── Buttons ─── */
+.primaryBtn {
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: #0d47a1;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.primaryBtn:hover {
+  background: #0b3d91;
+}
+
+.primaryBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.primaryBtnInline {
+  composes: primaryBtn;
+  width: auto;
+  padding: 12px 32px;
+}
+
+.secondaryBtn {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #546e7a;
+  background: none;
+  border: 1px solid #cfd8dc;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  transition: all 0.2s;
+}
+
+.secondaryBtn:hover {
+  background: #f5f5f5;
+  border-color: #b0bec5;
+}
+
+/* ─── Success ─── */
+.successBody {
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.successIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-weight: 700;
+}
+
+.successTitle {
+  font-size: 22px;
+  color: #0d47a1;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.successDesc {
+  font-size: 15px;
+  color: #546e7a;
+  line-height: 1.6;
+}

@@ -1,0 +1,19 @@
+.page {
+  display: block;
+}
+.grid {
+  display: grid;
+  grid-gap: 30px;
+  @media (min-width: 960px) {
+    grid-template-columns: 1fr 380px;
+  }
+}
+.logoWrapper {
+  height: 200px;
+  align-self: flex-start;
+  justify-content: center;
+  display: flex;
+}
+.logo {
+  object-fit: contain;
+}

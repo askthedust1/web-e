@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+  height: 850px;
+
+  :global(.leaflet-control) {
+    svg {
+      opacity: 0.0 !important;
+    }
+  }
+
+  :global(.leaflet-top) {
+    z-index: 900;
+  }
+}
+.clusterClass {
+  width: 30px;
+  height: 30px;
+}

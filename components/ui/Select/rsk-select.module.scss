@@ -1,0 +1,93 @@
+.container {
+  // margin-bottom: 20px;
+  cursor: pointer;
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    margin: 0;
+  }
+}
+
+.select {
+  cursor: pointer;
+  font-weight: 600;
+  opacity: 0.8;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding: 10px 30px 10px 16px;
+  background: $BLUE30;
+  border-radius: 8px;
+  border: 1px solid $BLUE150;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  color: $BLACK;
+  &:focus {
+    background-color: $WHITE;
+    border: 1px solid var(--BLUE);
+  }
+  option {
+    background-color: $WHITE;
+  }
+}
+.block {
+  min-width: 100%;
+  min-height: 100%;
+  height: 64px;
+  border: none;
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: $TEXT400;
+  position: relative;
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    height: 48px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: $TEXT600;
+  }
+}
+.icon {
+  position: absolute;
+  right: 24px;
+  z-index: -1;
+  color: $BLACK;
+}
+.massage {
+  padding-left: 20px;
+  color: $TEXT400;
+  z-index: -1;
+}
+.isHalf {
+  min-width: 48%;
+  height: 64px;
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    height: 48px;
+    margin-bottom: 15px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: $TEXT600;
+  }
+}
+.label {
+  color: $TEXT600;
+}
+.placeholder {
+}
+.error {
+  color: $RED;
+}
+.option {
+}
+.icon_mob {
+  position: absolute;
+  right: 24px;
+  bottom: 15px;
+  z-index: -1;
+  color: $BLACK;
+}
+.label {
+}

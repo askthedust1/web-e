@@ -1,0 +1,31 @@
+.tableWrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table {
+  width: 100%;
+}
+.tr {
+  padding: 15px 15px;
+  text-align: left;
+  border: none;
+  min-height: 64px;
+  background: var(--WHITE);
+  &:nth-child(even) {
+    background: var(--BLUE10);
+  }
+}
+.th {
+  border-bottom: 1px solid #e5e5e5;
+  color: $TEXT400;
+  padding: 15px 15px;
+  background: var(--WHITE);
+}
+.td {
+  color: var(--BLACK);
+  padding: 15px 15px;
+  &:last-child {
+    text-align: left;
+    width: 370px;
+  }
+}

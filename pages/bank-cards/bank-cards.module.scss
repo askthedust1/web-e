@@ -1,0 +1,17 @@
+.page{
+  display: block;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  grid-gap: 30px;
+}
+.logoWrapper{
+  height: 200px;
+  align-self: flex-start;
+  justify-content: center;
+  display: flex;
+}
+.logo{
+  object-fit: contain;
+}

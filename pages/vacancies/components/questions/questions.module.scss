@@ -1,0 +1,23 @@
+.questions {
+  margin-top: 80px;
+  position: relative;
+
+  @media (max-width: 960px) {
+    margin-top: 0;
+  }
+}
+
+.sections_5 {
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #1E1E62;
+
+  @media (max-width: 960px) {
+    font-size: 24px;
+  }
+}

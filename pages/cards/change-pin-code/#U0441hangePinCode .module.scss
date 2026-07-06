@@ -1,0 +1,1329 @@
+$blue: #146ce8;
+$green: #8bc87c;
+$darkBlue: #0f56bd;
+$darkGreen: #6bae5e;
+
+.headerSection {
+  padding-bottom: 0;
+}
+
+.page {
+  padding-bottom: 80px;
+}
+
+.tabBar {
+  display: inline-flex;
+  background: #f4f8ff;
+  border: 1px solid rgba($blue, 0.12);
+  border-radius: 16px;
+  padding: 5px;
+  gap: 4px;
+  margin-bottom: 44px;
+  flex-wrap: wrap;
+}
+
+.tabBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border: none;
+  border-radius: 12px;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.25s;
+  white-space: nowrap;
+
+  &:hover {
+    color: $blue;
+    background: rgba($blue, 0.06);
+  }
+}
+
+.tabBtnActive {
+  background: #fff;
+  color: $blue;
+  font-weight: 900;
+  box-shadow: 0 8px 20px rgba($blue, 0.12);
+}
+
+.tabIcon {
+  display: flex;
+  align-items: center;
+}
+
+.tabPane {
+  min-height: 420px;
+}
+
+/* ===== InApp: Steps Track ===== */
+.stepsTrack {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-x: auto;
+  padding: 10px 0 20px;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 168px;
+  max-width: 195px;
+  flex-shrink: 0;
+}
+
+.connector {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-top: 190px;
+  flex-shrink: 0;
+  margin: 0 4px;
+}
+
+.cDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba($blue, 0.3);
+}
+
+.cLine {
+  width: 12px;
+  height: 2px;
+  background: rgba($blue, 0.3);
+  border-radius: 1px;
+}
+
+.badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, $blue, $green);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 20px rgba($blue, 0.25);
+}
+
+.badgeDone {
+  background: linear-gradient(145deg, $green, $blue);
+}
+
+/* ===== Phone Frame ===== */
+.phone {
+  position: relative;
+  width: 158px;
+  flex-shrink: 0;
+}
+
+.phoneGlow::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, rgba($green, 0.2), rgba($blue, 0.12));
+  z-index: -1;
+}
+
+.phoneButtonLeft,
+.phoneButtonRight1,
+.phoneButtonRight2 {
+  position: absolute;
+  width: 3px;
+  background: #2c2c2e;
+  z-index: 2;
+}
+
+.phoneButtonLeft {
+  left: -2px;
+  top: 80px;
+  height: 28px;
+}
+
+.phoneButtonRight1 {
+  right: -2px;
+  top: 70px;
+  height: 22px;
+}
+
+.phoneButtonRight2 {
+  right: -2px;
+  top: 100px;
+  height: 22px;
+}
+
+.phoneBody {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  background: #1a1a1c;
+  border-radius: 28px;
+  padding: 8px 7px;
+  overflow: hidden;
+  box-shadow: 0 24px 48px -8px rgba(0, 0, 0, 0.14);
+}
+
+.phoneNotch {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 16px;
+  background: #000;
+  border-radius: 10px;
+  z-index: 4;
+}
+
+.phoneCam {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #1c2536;
+}
+
+.phoneScreen {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 8px);
+  border-radius: 20px;
+  overflow: hidden;
+  background: #000;
+}
+
+.phoneBar {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  z-index: 4;
+}
+
+.stepLabel {
+  font-size: 13px;
+  line-height: 1.45;
+  color: #475569;
+  text-align: center;
+  margin-top: 16px;
+  max-width: 175px;
+}
+
+.stepLabelDone {
+  color: $blue;
+  font-weight: 900;
+}
+
+.ctaRow {
+  display: flex;
+  justify-content: center;
+  margin-top: 56px;
+}
+
+.ctaBtn {
+  padding: 15px 40px;
+  background: linear-gradient(135deg, $blue, $green);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* ===== ATM Tab ===== */
+.atmCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.atmCard {
+  position: relative;
+  min-height: 360px;
+  padding: 22px 18px 0;
+  background:
+    radial-gradient(circle at 50% 0%, rgba($blue, 0.06), transparent 42%), #fff;
+  border: 1px solid rgba($blue, 0.1);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 34px rgba($blue, 0.08);
+}
+
+.atmBadge {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, $blue, $darkBlue);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.atmBadgeSuccess {
+  background: linear-gradient(145deg, $green, $blue);
+}
+
+.atmCardTitle {
+  min-height: 58px;
+  margin: 0 auto 18px;
+  color: #0f172a;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.atmIllustration {
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 78%;
+  height: 210px;
+  transform: translateX(-50%);
+  background: linear-gradient(145deg, #303742, #aeb7c2 42%, #4c5561);
+  border-radius: 20px 20px 6px 6px;
+}
+
+.atmTop {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  z-index: 2;
+  width: 72%;
+  height: 34px;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    $blue 0%,
+    $blue 62%,
+    $green 62%,
+    $green 100%
+  );
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.atmScreen {
+  position: absolute;
+  top: 62px;
+  left: 50%;
+  z-index: 3;
+  width: 58%;
+  height: 82px;
+  transform: translateX(-50%);
+  border-radius: 7px;
+  background: linear-gradient(180deg, #fff, #eaf2ff);
+  border: 4px solid #24272d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cardInsert {
+  width: 74px;
+  height: 46px;
+  background: linear-gradient(135deg, $blue, #4aa3ff);
+  border-radius: 6px;
+}
+
+.langBox,
+.menuBox,
+.pinBox,
+.successBox {
+  width: 82%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center;
+  font-size: 9px;
+  color: #111827;
+}
+
+.langBox span,
+.langBox b,
+.menuBox span,
+.menuBox b {
+  padding: 4px 6px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.langBox b,
+.menuBox b {
+  background: linear-gradient(90deg, $blue, $green);
+  color: #fff;
+}
+
+.pinBox {
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.pinBox div {
+  display: flex;
+  gap: 7px;
+  margin-top: 7px;
+}
+
+.pinBox i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $blue;
+}
+
+.successBox {
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.successBox div {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, $green, $blue);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.atmKeyboard {
+  position: absolute;
+  left: 42%;
+  bottom: 24px;
+  z-index: 4;
+  width: 72px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+
+.atmKeyboard span {
+  height: 8px;
+  border-radius: 2px;
+  background: #cbd5e1;
+}
+
+.atmCardSlot {
+  position: absolute;
+  right: 18%;
+  bottom: 28px;
+  z-index: 4;
+  width: 46px;
+  height: 22px;
+  border-radius: 4px;
+  background: #111827;
+}
+
+/* ===== Map Section (ATM) ===== */
+.mapSection {
+  margin-top: 44px;
+  padding: 28px;
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, rgba($blue, 0.04), rgba($green, 0.06)), #fff;
+  border: 1px solid rgba($blue, 0.12);
+}
+
+.mapHeader {
+  margin-bottom: 20px;
+
+  h3 {
+    margin: 0 0 6px;
+    color: #0f172a;
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  p {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+  }
+}
+
+.regionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.regionBtn {
+  padding: 9px 18px;
+  border: 1px solid rgba($blue, 0.18);
+  border-radius: 12px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  color: #64748b;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $blue;
+    color: $blue;
+  }
+}
+
+.regionBtnActive {
+  background: linear-gradient(135deg, $blue, $green);
+  border-color: transparent;
+  color: #fff;
+}
+
+.mapBlock {
+  height: 520px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba($blue, 0.12);
+  background: #fff;
+}
+
+/* ===== Branch Tab ===== */
+.branchBox {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+  gap: 28px;
+  align-items: stretch;
+  padding: 28px;
+  border-radius: 28px;
+  background: #fff;
+  border: 1px solid rgba($blue, 0.12);
+  box-shadow: 0 18px 46px rgba(15, 23, 42, 0.08);
+}
+
+.branchMapSide {
+  min-width: 0;
+}
+
+.branchMapHead {
+  margin-bottom: 18px;
+
+  h3 {
+    margin: 0 0 6px;
+    color: #0f172a;
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  p {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.45;
+  }
+}
+
+.branchMapBlock {
+  height: 480px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba($blue, 0.12);
+  background: #fff;
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.08);
+}
+
+.branchStepsSide {
+  padding: 34px 28px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top right, rgba($green, 0.18), transparent 34%),
+    linear-gradient(135deg, rgba($blue, 0.06), rgba($green, 0.08)), #f8fbff;
+
+  h2 {
+    margin: 10px 0 28px;
+    color: #0f172a;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.22;
+  }
+}
+
+.branchSmallTitle {
+  display: inline-flex;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #fff;
+  color: $blue;
+  font-size: 14px;
+  font-weight: 900;
+  box-shadow: 0 8px 20px rgba($blue, 0.1);
+}
+
+.branchSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.branchStep {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 14px;
+  align-items: center;
+
+  p {
+    margin: 0;
+    color: #1f2937;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.42;
+  }
+}
+
+.branchStepNum {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #334155, $blue);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 900;
+  box-shadow: 0 10px 22px rgba($blue, 0.25);
+}
+
+.branchStepNumDone {
+  background: linear-gradient(145deg, $green, $blue);
+}
+
+/* ===== QR Modal ===== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.gridApps {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 24px;
+  max-width: 480px;
+  width: 92%;
+  position: relative;
+  overflow: hidden;
+}
+
+.modalX {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #94a3b8;
+}
+
+.modalBody {
+  padding: 40px 32px 32px;
+  text-align: center;
+}
+
+.modalTitle {
+  font-size: 20px;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.modalDesc {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 28px;
+}
+
+.qrBox {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.qrImg {
+  width: 380px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+}
+
+.storeBadges {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+
+  a {
+    display: block;
+    height: 44px;
+
+    img {
+      height: 100%;
+    }
+  }
+}
+
+/* ===========================================================
+   RESPONSIVE
+   =========================================================== */
+
+/* ---------- <= 1200px ---------- */
+@media (max-width: 1200px) {
+  .atmCardsGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .branchBox {
+    grid-template-columns: 1fr;
+  }
+
+  .branchStepsSide h2 {
+    font-size: 28px;
+  }
+}
+
+/* ---------- <= 1024px ---------- */
+@media (max-width: 1024px) {
+  .stepsTrack {
+    justify-content: flex-start;
+    padding: 10px 0 20px;
+    gap: 0;
+  }
+
+  .stepItem {
+    min-width: 150px;
+    max-width: 170px;
+  }
+
+  .phone {
+    width: 140px;
+  }
+
+  .phoneBody {
+    height: 284px;
+    border-radius: 24px;
+  }
+
+  .phoneNotch {
+    width: 52px;
+    height: 14px;
+  }
+
+  .phoneButtonLeft {
+    top: 70px;
+    height: 24px;
+  }
+
+  .phoneButtonRight1 {
+    top: 62px;
+    height: 18px;
+  }
+
+  .phoneButtonRight2 {
+    top: 88px;
+    height: 18px;
+  }
+
+  .connector {
+    padding-top: 165px;
+    margin: 0 2px;
+  }
+}
+
+/* ---------- <= 900px ---------- */
+@media (max-width: 900px) {
+  .page {
+    padding-bottom: 56px;
+  }
+
+  .tabBar {
+    margin-bottom: 32px;
+  }
+
+  .atmCardsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .atmCard {
+    min-height: 320px;
+  }
+
+  .atmCardTitle {
+    font-size: 17px;
+    min-height: 48px;
+    margin-bottom: 14px;
+  }
+
+  .atmIllustration {
+    height: 180px;
+  }
+
+  .mapSection {
+    padding: 20px;
+    margin-top: 32px;
+  }
+
+  .mapHeader h3 {
+    font-size: 20px;
+  }
+
+  .branchMapHead h3 {
+    font-size: 20px;
+  }
+
+  .branchStepsSide {
+    h2 {
+      font-size: 26px;
+    }
+  }
+}
+
+/* ---------- <= 768px ---------- */
+@media (max-width: 768px) {
+  .tabBar {
+    width: 100%;
+    margin-bottom: 28px;
+  }
+
+  .tabBtn {
+    flex: 1;
+    justify-content: center;
+    padding: 11px 14px;
+    font-size: 14px;
+  }
+
+  /* ================================================
+     InApp — ВЕРТИКАЛЬНАЯ раскладка шагов (не скролл!)
+     ================================================ */
+  .stepsTrack {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: visible;
+    padding: 0 0 10px;
+    gap: 0;
+  }
+
+  .stepItem {
+    min-width: unset;
+    max-width: 240px;
+    width: 100%;
+  }
+
+  .phone {
+    width: 180px;
+  }
+
+  .phoneBody {
+    height: 366px;
+    border-radius: 28px;
+    padding: 8px 7px;
+  }
+
+  .phoneNotch {
+    width: 60px;
+    height: 16px;
+    top: 12px;
+  }
+
+  .phoneScreen {
+    border-radius: 20px;
+  }
+
+  .phoneButtonLeft {
+    top: 80px;
+    height: 28px;
+    width: 3px;
+  }
+
+  .phoneButtonRight1 {
+    top: 70px;
+    height: 22px;
+    width: 3px;
+  }
+
+  .phoneButtonRight2 {
+    top: 100px;
+    height: 22px;
+    width: 3px;
+  }
+
+  .badge {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+
+  /* Коннектор между шагами — вертикальный */
+  .connector {
+    flex-direction: column;
+    padding-top: 0;
+    margin: 10px 0;
+    gap: 4px;
+  }
+
+  .cLine {
+    width: 2px;
+    height: 16px;
+  }
+
+  .stepLabel {
+    font-size: 14px;
+    margin-top: 14px;
+    max-width: 220px;
+  }
+
+  .ctaRow {
+    margin-top: 36px;
+  }
+
+  .ctaBtn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+
+  /* ================================================
+     ATM — карточки переверстаны для мобилки
+     ================================================ */
+  .atmCardsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .atmCard {
+    /* Убираем фикс высоту, контент определяет размер */
+    min-height: unset;
+    padding: 20px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 18px;
+  }
+
+  .atmBadge {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .atmCardTitle {
+    min-height: unset;
+    font-size: 17px;
+    margin-bottom: 16px;
+  }
+
+  /* Иллюстрация банкомата — из абсолюта в поток! */
+  .atmIllustration {
+    position: relative;
+    left: unset;
+    bottom: unset;
+    transform: none;
+    width: 220px;
+    max-width: 100%;
+    height: 190px;
+    margin: 0 auto;
+    border-radius: 16px 16px 6px 6px;
+    flex-shrink: 0;
+  }
+
+  /* ATM map */
+  .mapBlock,
+  .branchMapBlock {
+    height: 420px;
+  }
+
+  .mapSection {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  /* Branch */
+  .branchBox {
+    padding: 18px;
+    gap: 20px;
+    border-radius: 20px;
+  }
+
+  .branchStepsSide {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+
+  .branchStep p {
+    font-size: 16px;
+  }
+
+  .branchStepNum {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  .branchStep {
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+  }
+
+  /* QR Modal */
+  .modal {
+    width: 96%;
+    border-radius: 20px;
+  }
+
+  .modalBody {
+    padding: 32px 20px 24px;
+  }
+
+  .modalTitle {
+    font-size: 18px;
+  }
+
+  .qrImg {
+    max-width: 280px;
+  }
+}
+
+/* ---------- <= 560px ---------- */
+@media (max-width: 560px) {
+  .page {
+    padding-bottom: 40px;
+  }
+
+  .tabBar {
+    border-radius: 14px;
+    padding: 4px;
+    gap: 3px;
+    margin-bottom: 24px;
+  }
+
+  .tabBtn {
+    padding: 10px 10px;
+    font-size: 13px;
+    gap: 5px;
+    border-radius: 10px;
+  }
+
+  .tabIcon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* InApp — телефон чуть меньше на узких экранах */
+  .stepItem {
+    max-width: 200px;
+  }
+
+  .phone {
+    width: 160px;
+  }
+
+  .phoneBody {
+    height: 326px;
+    border-radius: 26px;
+    padding: 7px 6px;
+  }
+
+  .phoneNotch {
+    width: 54px;
+    height: 14px;
+    top: 10px;
+  }
+
+  .phoneScreen {
+    border-radius: 19px;
+  }
+
+  .badge {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .connector {
+    margin: 8px 0;
+  }
+
+  .cLine {
+    height: 12px;
+  }
+
+  .stepLabel {
+    font-size: 13px;
+    max-width: 200px;
+  }
+
+  .ctaBtn {
+    border-radius: 12px;
+    font-size: 14px;
+  }
+
+  /* ATM */
+  .atmCard {
+    padding: 18px 14px 14px;
+    border-radius: 16px;
+  }
+
+  .atmBadge {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .atmCardTitle {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .atmIllustration {
+    width: 200px;
+    height: 170px;
+    border-radius: 14px 14px 4px 4px;
+  }
+
+  /* ATM map */
+  .mapSection {
+    padding: 14px;
+    border-radius: 16px;
+    margin-top: 24px;
+  }
+
+  .mapHeader {
+    margin-bottom: 14px;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .regionRow {
+    gap: 6px;
+    margin-bottom: 14px;
+    /* Горизонтальный скролл для регионов */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+  }
+
+  .regionBtn {
+    padding: 8px 14px;
+    font-size: 13px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+
+  .mapBlock,
+  .branchMapBlock {
+    height: 340px;
+    border-radius: 14px;
+  }
+
+  /* Branch */
+  .branchBox {
+    padding: 14px;
+    gap: 16px;
+    border-radius: 16px;
+  }
+
+  .branchMapHead {
+    margin-bottom: 14px;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .branchStepsSide {
+    padding: 20px 16px;
+    border-radius: 16px;
+
+    h2 {
+      font-size: 22px;
+      margin: 8px 0 20px;
+    }
+  }
+
+  .branchSmallTitle {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .branchSteps {
+    gap: 16px;
+  }
+
+  .branchStep {
+    grid-template-columns: 42px 1fr;
+    gap: 10px;
+  }
+
+  .branchStepNum {
+    width: 42px;
+    height: 42px;
+    font-size: 17px;
+  }
+
+  .branchStep p {
+    font-size: 15px;
+  }
+
+  /* QR Modal */
+  .modalBody {
+    padding: 28px 16px 20px;
+  }
+
+  .modalTitle {
+    font-size: 17px;
+  }
+
+  .modalDesc {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .qrImg {
+    max-width: 220px;
+  }
+}
+
+/* ---------- <= 380px (мелкие телефоны) ---------- */
+@media (max-width: 380px) {
+  .tabBtn {
+    padding: 9px 8px;
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .tabIcon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* InApp */
+  .phone {
+    width: 140px;
+  }
+
+  .phoneBody {
+    height: 286px;
+    border-radius: 22px;
+    padding: 6px 5px;
+  }
+
+  .phoneNotch {
+    width: 46px;
+    height: 12px;
+    top: 9px;
+    border-radius: 8px;
+  }
+
+  .phoneScreen {
+    border-radius: 16px;
+  }
+
+  .phoneButtonLeft,
+  .phoneButtonRight1,
+  .phoneButtonRight2 {
+    display: none;
+  }
+
+  .badge {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .stepLabel {
+    font-size: 12px;
+  }
+
+  /* ATM */
+  .atmIllustration {
+    width: 180px;
+    height: 155px;
+  }
+
+  .atmCardTitle {
+    font-size: 15px;
+  }
+
+  /* Map */
+  .mapBlock,
+  .branchMapBlock {
+    height: 280px;
+  }
+
+  .branchStepsSide h2 {
+    font-size: 20px;
+  }
+
+  .branchStep p {
+    font-size: 14px;
+  }
+
+  .branchStepNum {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .branchStep {
+    grid-template-columns: 36px 1fr;
+    gap: 8px;
+  }
+}

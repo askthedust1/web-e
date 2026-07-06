@@ -1,0 +1,85 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.loaderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.loader {
+  height: 186px;
+  background-color: var(--BLUE10);
+  border: 1px dashed $TEXT50;
+  border-radius: 4px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  color: var(--BLUE);
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background-color: var(--WHITE);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.title {
+  color: $TEXT600;
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.subtitle {
+  display: flex;
+  color: $TEXT400;
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+.paragraf {
+  margin-right: 5px;
+}
+.button {
+  max-width: 180px;
+  margin: 20px auto;
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    min-width: 100%;
+    margin: 0;
+  }
+}
+
+.imgWrapper {
+  border-radius: 6px;
+  height: 186px;
+  max-width: 284px;
+  overflow: hidden;
+}
+.image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.error {
+  color: $RED;
+}

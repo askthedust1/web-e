@@ -1,0 +1,288 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.surveyPage {
+  min-height: 60vh;
+  padding: 40px 0 80px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: $BLACK;
+  margin-bottom: 12px;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    font-size: 22px;
+  }
+}
+
+.description {
+  font-size: 16px;
+  color: $BLUE500;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card {
+  max-width: 640px;
+  margin: 0 auto;
+  background: $WHITE;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  padding: 32px;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    padding: 20px;
+    border-radius: 12px;
+  }
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.progressBar {
+  flex: 1;
+  height: 4px;
+  background: $BLUE25;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: $BLUE;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  font-size: 13px;
+  color: $BLUE300;
+  white-space: nowrap;
+}
+
+.questionBlock {
+  animation: fadeIn 0.25s ease;
+}
+
+.questionText {
+  font-size: 18px;
+  font-weight: 500;
+  color: $BLACK;
+  margin-bottom: 8px;
+  line-height: 1.4;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    font-size: 16px;
+  }
+}
+
+.hint {
+  font-size: 14px;
+  color: $BLUE300;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.optionLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid $BLUE25;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-size: 15px;
+  color: $BLUE700;
+  line-height: 1.4;
+
+  &:hover {
+    background: $BLUE10;
+    border-color: $BLUE150;
+  }
+
+  input {
+    accent-color: $BLUE;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+}
+
+.optionSelected {
+  background: $BLUE10;
+  border-color: $BLUE;
+}
+
+.starsRow {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.star {
+  cursor: pointer;
+  font-size: 36px;
+  color: $BLUE150;
+  transition: color 0.15s ease, transform 0.15s ease;
+  user-select: none;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+
+  &:hover {
+    transform: scale(1.15);
+  }
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    font-size: 30px;
+  }
+}
+
+.starActive {
+  color: #f5a623;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 120px;
+  border: 1px solid $BLUE25;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 15px;
+  resize: vertical;
+  font-family: inherit;
+  color: $BLACK;
+  outline: none;
+  transition: border-color 0.15s;
+
+  &::placeholder {
+    color: $BLUE200;
+  }
+
+  &:focus {
+    border-color: $BLUE;
+  }
+}
+
+.contactInput {
+  width: 100%;
+  border: 1px solid $BLUE25;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-family: inherit;
+  color: $BLACK;
+  outline: none;
+  transition: border-color 0.15s;
+
+  &::placeholder {
+    color: $BLUE200;
+  }
+
+  &:focus {
+    border-color: $BLUE;
+  }
+}
+
+.error {
+  color: $RED;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.btnBack {
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background: $WHITE;
+  color: $BLUE500;
+  border: 1px solid $BLUE150;
+
+  &:hover {
+    background: $BLUE10;
+  }
+}
+
+.btnNext {
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background: $BLUE;
+  color: $WHITE;
+  border: none;
+
+  &:hover {
+    background: $BLUE_HOVER;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.successScreen {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.successIcon {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.successTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: $BLACK;
+  margin-bottom: 12px;
+}
+
+.successText {
+  font-size: 16px;
+  color: $BLUE500;
+  line-height: 1.5;
+}

@@ -1,0 +1,54 @@
+.card {
+  padding: 40px;
+  max-width: 480px;
+  min-height: 620px;
+  background: $WHITE;
+  box-shadow: $SHADOW_2;
+  border-radius: 16px;
+  margin-left: 135px;
+
+  @media (max-width: 1200px) {
+    margin-left: 10%;
+  }
+  @media (max-width: 960px) {
+    margin: 15px auto;
+    padding: 20px 16px;
+  }
+}
+.cardInfoText {
+  margin-top: 20px;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f3ff 100%);
+  border-radius: 12px;
+  border: 1px solid #e0e7ff;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #2d3748;
+  white-space: pre-line;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, $BLUE, $BLUE);
+  }
+
+  &:first-of-type {
+    margin-top: 30px;
+  }
+
+  &:last-child {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 960px) {
+    padding: 14px 16px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+}

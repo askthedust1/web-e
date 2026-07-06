@@ -1,0 +1,11 @@
+.section{
+  :global{
+    .swiper{
+      margin: -15px;
+      padding: 15px;
+    }
+    .swiper-slide{
+      height: auto;
+    }
+  }
+}

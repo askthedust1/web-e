@@ -1,0 +1,101 @@
+.counterWrapper {
+  background-color: #80cde83d;
+  border-radius: 32px;
+  height: 216px;
+  width: 1173px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 40px 20px;
+  }
+}
+
+.counterGroup {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1112px;
+  gap: 32px;
+
+  @media (max-width: 960px) {
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  @media (max-width: 480px) {
+    gap: 16px;
+  }
+}
+
+.counterItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 25%;
+
+  @media (max-width: 768px) {
+    width: 45%;
+  }
+
+  @media (max-width: 480px) {
+    width: 45%;
+  }
+}
+
+.counterValue {
+  background: linear-gradient(
+                  90deg,
+                  rgba(30, 30, 98, 1) 0%,
+                  rgba(21, 108, 230, 1) 51%,
+                  rgba(9, 197, 43, 1) 100%
+  );
+  font-family: 'Montserrat', sans-serif !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.32px;
+  line-height: 56px;
+  white-space: nowrap;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+.counterLabel {
+  color: #175ac7;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  white-space: nowrap;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}

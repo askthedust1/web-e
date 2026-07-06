@@ -1,0 +1,65 @@
+$primary-color: #3498db;
+$background-color: #f9f9f9;
+$text-color: #333;
+$accent-color: #2c3e50;
+$border-radius: 10px;
+$padding: 20px;
+$font-size: 16px;
+
+.consentContainer {
+  background-color: $background-color;
+  padding: $padding;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: $text-color;
+}
+
+.consentTitle {
+  font-size: 24px;
+  color: $primary-color;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.consentText {
+  font-size: $font-size;
+  margin-bottom: 15px;
+}
+
+.consentList {
+  list-style-type: disc;
+  padding-left: 20px;
+
+  li {
+    margin-bottom: 10px;
+    font-size: $font-size;
+  }
+}
+
+.scrollHint {
+  font-size: $font-size;
+  margin-top: 20px;
+  font-style: italic;
+  color: $accent-color;
+}
+
+.btn_got {
+  width: 100%;
+  height: 40px;
+  margin-top: 30px;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.btn_got_red {
+  width: 100%;
+  height: 40px;
+  margin-top: 30px;
+  font-size: 14px;
+  background-color: darkred;
+  margin-right: 5px;
+}

@@ -1,0 +1,163 @@
+//.careerNav {
+//  background: rgba(255, 255, 255, 0.5);
+//  width: 100%;
+//  position: absolute;
+//  top: 0;
+//  font-size: 14px;
+//  display: flex;
+//  justify-content: center;
+//  z-index: 10;
+//
+//  @media (max-width: 960px) {
+//    top: 0;
+//  }
+//
+//  .careerNavInner {
+//    padding: 10px 0;
+//
+//    @media (max-width: 830px) {
+//      display: flex;
+//      align-items: center;
+//      flex-wrap: wrap;
+//      justify-content: center;
+//    }
+//  }
+//
+//  button {
+//    display: inline-block;
+//    margin-right: 20px;
+//    position: relative;
+//    border: none;
+//    background: linear-gradient(190deg, #1e1e62, $BLUE, #09c52b);
+//    background-size: 200%;
+//    background-clip: text;
+//    -webkit-background-clip: text;
+//    -webkit-text-fill-color: transparent;
+//    text-decoration: none;
+//    padding: 8px 15px;
+//    font-weight: 800;
+//    font-size: 20px;
+//    transition: background-position 0.6s ease-in-out;
+//    cursor: pointer;
+//
+//    @media (max-width: 530px) {
+//      font-size: 14px;
+//      margin-right: 0;
+//    }
+//
+//    &::after {
+//      content: '';
+//      position: absolute;
+//      inset: 0;
+//      z-index: 1;
+//    }
+//
+//    &:hover {
+//      background-position: right;
+//    }
+//  }
+//  .active {
+//    background: white !important;
+//    -webkit-text-fill-color: $BLUE !important;
+//    border-radius: 16px;
+//    padding: 8px 15px;
+//  }
+//}
+//
+//.careerNav {
+//  background: rgba(255, 255, 255, 0.5);
+//  width: 100%;
+//  position: absolute;
+//  top: 0;
+//  font-size: 14px;
+//  display: flex;
+//  justify-content: center;
+//  z-index: 10;
+//
+//  @media (max-width: 768px) {
+//    justify-content: flex-start;
+//    overflow-x: auto;
+//    -webkit-overflow-scrolling: touch;
+//  }
+//
+//  .careerNavInner {
+//    display: flex;
+//    padding: 10px 20px;
+//    gap: 10px;
+//    @media (max-width: 768px) {
+//      flex-wrap: nowrap;
+//    }
+//  }
+//
+//  button {
+//    flex: 0 0 auto;
+//    font-size: 16px;
+//
+//    @media (max-width: 530px) {
+//      font-size: 14px;
+//    }
+//  }
+//}
+
+.careerNav {
+  background: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+
+  .careerNavInner {
+    display: flex;
+    padding: 10px 0;
+    gap: 12px;
+
+    @media (max-width: 768px) {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      gap: 8px;
+      padding: 10px 16px;
+    }
+
+    // скрытие скроллбара на мобилке
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none; /* IE и Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  button {
+    flex: 0 0 auto;
+    border: none;
+    background: linear-gradient(190deg, #1e1e62, $BLUE, #09c52b);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-position: right;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      scroll-snap-align: start;
+    }
+
+    &.active {
+      background: white !important;
+      -webkit-text-fill-color: $BLUE !important;
+      border-radius: 16px;
+    }
+  }
+}
+

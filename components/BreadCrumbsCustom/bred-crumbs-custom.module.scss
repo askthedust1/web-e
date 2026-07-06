@@ -1,0 +1,35 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    &.absolute {
+        margin-top: 10px;
+        position: absolute;
+        z-index: 20;
+    }
+    @media (max-width: $BREAK_POINT_SIZE) {
+        display: none;
+    }
+}
+.titleWrapper {
+    display: flex;
+    margin-right: 5px;
+    align-items: center;
+}
+.link {
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+    color: var(--TEXT400);
+    &.active {
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--BLACK);
+    }
+}
+.icon {
+    margin-left: 5px;
+}
+.p {
+    font-weight: 700;
+}

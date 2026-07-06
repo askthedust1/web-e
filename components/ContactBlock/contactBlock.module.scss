@@ -1,0 +1,93 @@
+.contactSection {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+      padding: 32px 0;
+    }
+
+    @media (max-width: 480px) {
+      padding: 24px 0;
+    }
+  }
+
+  .contactCard {
+    background-color: $NEUTRAL_100;
+    border-radius: 16px;
+    padding: 32px;
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    @media (max-width: 768px) {
+      padding: 24px;
+      border-radius: 12px;
+      margin: 0 16px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 20px 16px;
+      margin: 0 12px;
+    }
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 24px;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .contactItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    color: #34495e;
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @media (max-width: 480px) {
+        margin-bottom: 12px;
+      }
+    }
+
+    svg {
+      color: var(--BLUE, #007bff);
+      flex-shrink: 0;
+    }
+  }
+
+  .link {
+    color: var(--BLUE, #007bff);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    word-break: break-all;
+
+    &:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+  }
+

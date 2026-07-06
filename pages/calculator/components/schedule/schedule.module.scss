@@ -1,0 +1,100 @@
+.headerWrapper {
+  background: var(--WHITE);
+  width: 100%;
+  border-bottom: 1px solid $BLUE25;
+  @media (max-width: 960px) {
+    font-size: 14px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon {
+  color: #3c485c;
+  cursor: pointer;
+}
+.titleHeader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.infoWrapper {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  @media (max-width: 960px) {
+    font-size: 13px;
+  }
+}
+.key {
+  color: $TEXT400;
+  @media (max-width: 960px) {
+    font-size: 15px;
+  }
+}
+.value {
+  color: $BLACK;
+  @media (max-width: 960px) {
+    font-size: 25px;
+  }
+}
+.button {
+}
+.buttonText {
+  @media (max-width: 960px) {
+    width: 80px;
+    font-size: 12px;
+  }
+}
+
+.table {
+  margin-top: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+.thead {
+  width: 100%;
+  border-bottom: 1px solid $BLUE25;
+}
+.tr {
+  max-width: 200px;
+  background-color: $WHITE;
+  &:nth-child(even) {
+    background: $TEXT10;
+  }
+  @media (max-width: 960px) {
+    font-size: 12px;
+    font-weight: 700;
+  }
+}
+.th {
+  padding: 24px 15px;
+  text-align: left;
+  color: $TEXT400;
+  @media (max-width: 960px) {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+.td {
+  padding: 24px 15px;
+  color: $BLACK;
+}
+.print {
+  overflow: hidden;
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    overflow: scroll;
+  }
+}

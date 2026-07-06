@@ -1,0 +1,98 @@
+.section {
+  margin-top: 40px;
+  border-top: 1px solid var(--BLUE25);
+  border-bottom: 1px solid var(--BLUE25);
+  padding: 27px 0;
+}
+.side {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+}
+.side__left {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 72px;
+  align-items: center;
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(1, auto);
+    grid-gap: 15px;
+    margin-bottom: 20px;
+  }
+  .action {
+    display: grid;
+    grid-template-columns: 48px auto;
+    align-items: center;
+    grid-gap: 16px;
+    text-decoration: none;
+  }
+  .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    padding: 12px;
+    color: #fff;
+  }
+  .icon__headphone {
+    background: #3a90e7;
+    &:hover {
+      background: var(--BLUE);
+    }
+  }
+  .icon__call {
+    background: #eb8889;
+    &:hover {
+      background: var(--BLUE);
+    }
+  }
+  .icon__whatsapp {
+    background: #19be87;
+    &:hover {
+      background: var(--BLUE);
+    }
+  }
+  .action__label {
+    color: var(--BLUE400);
+    @media (max-width: $MAX_MOBILE_SIZE) {
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+  .action__value {
+    color: $BLACK;
+    @media (max-width: $MAX_MOBILE_SIZE) {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+.side__right {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 24px;
+  align-items: center;
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(4, 75px);
+    grid-gap: 0;
+  }
+  .social {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .icon {
+    color: var(--BLUE200);
+    &:hover {
+      color: var(--BLUE);
+    }
+  }
+}
+
+.svg_container:hover {
+  > svg > path {
+    fill: #0a367e!important;
+  }
+}

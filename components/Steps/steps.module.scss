@@ -1,0 +1,105 @@
+.container {
+  display: block;
+  margin-top: 40px;
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    margin-top: 10px;
+  }
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  border-bottom: solid $BLUE25 1px;
+  margin-bottom: 40px;
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    border-bottom: none;
+  }
+}
+.step {
+  display: flex;
+  align-items: center;
+  max-width: 195px;
+  width: 195px;
+  cursor: pointer;
+}
+
+.number {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  background-color: $TEXT400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $WHITE;
+  margin-right: 12px;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+.activeNumber {
+  background-color: var(--BLUE);
+}
+.step {
+  padding-left: 15px;
+  height: 64px;
+}
+
+.activeStep {
+  border-bottom: solid var(--BLUE) 1px;
+  &:hover {
+    color: var(--BLUE);
+  }
+}
+.icon {
+  color: var(--BLUE);
+  &:hover {
+    color: $BLUE_HOVER;
+  }
+}
+.currentStep {
+  background-color: var(--BLUE);
+  &:hover {
+    background-color: $BLUE_HOVER;
+  }
+}
+
+.wrapper_mob {
+  display: flex;
+}
+.step_mob {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: $BLUE25;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+.activeStep_mob {
+  background-color: var(--BLUE);
+  color: $WHITE;
+}
+
+.iconArrow {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--BLUE);
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  color: var(--BLUE);
+  margin-bottom: 15px;
+  &:hover {
+    background-color: var(--BLUE);
+    color: $WHITE;
+  }
+  @media (max-width: 960px) {
+    margin-bottom: 20px;
+  }
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    display: none;
+  }
+}

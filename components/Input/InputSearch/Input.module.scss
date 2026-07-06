@@ -1,0 +1,23 @@
+.icon {
+  color: var(--BLUE);
+  position: absolute;
+  right: 12px;
+}
+.div {
+  position: relative;
+  width: 240px;
+  height: 40px;
+  border: 1px solid $TEXT50;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    // display: none;
+  }
+}
+.input {
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+}

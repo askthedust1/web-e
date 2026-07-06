@@ -1,0 +1,81 @@
+.grid {
+  min-height: 50px;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media (max-width: $BREAK_POINT_SIZE) {
+    row-gap: 20px;
+  }
+}
+.grid_def {
+  min-height: 50px;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: space-evenly;
+
+  @media (max-width: $BREAK_POINT_SIZE) {
+    flex-wrap: wrap;
+  }
+}
+
+.link {
+  min-height: 50px;
+  border: 1px solid rgba(221, 223, 224, 0.8);
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+  min-height: 50px;
+  text-decoration: none;
+  padding: 12px 32px;
+  color: $BLACK;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    border: 2px solid $YELLOW;
+  }
+}
+.active {
+  border: 1px solid $YELLOW;
+}
+.link_2 {
+  margin-bottom: 15px;
+  max-width: 252px;
+  width: 252px;
+  min-height: 72px;
+  background: var(--BLUE10);
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+  color: $BLACK;
+  position: relative;
+  padding: 20px 0px;
+  cursor: pointer;
+}
+.active {
+  border: 1px solid var(--BLUE);
+  background: var(--WHITE);
+}
+.badge {
+  color: var(--RED);
+  position: absolute;
+  bottom: 11px;
+  right: 15px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.badge_small{
+  color: var(--RED);
+  position: absolute;
+  top: 0px;
+  left: 60px;
+  font-weight: 700;
+  font-size: 9px;
+}

@@ -1,0 +1,82 @@
+.wrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 6, 23, 0.6);
+  z-index: 1100;
+  padding: 20px;
+}
+
+.content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 28px 22px;
+  max-width: 520px;
+  width: auto;
+  min-width: 320px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.success {
+  background: linear-gradient(180deg, #e6f4ea 0%, #dff1e3 100%);
+  color: #05944a;
+}
+
+.error {
+  background: linear-gradient(180deg, #ffecef 0%, #ffdfe6 100%);
+  color: #c53030;
+}
+
+.message {
+  font-size: 16px;
+  color: #0f172a;
+  text-align: center;
+  line-height: 1.4;
+  word-break: break-word;
+  /* force horizontal text flow in case of inherited styles */
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+  white-space: normal;
+  max-width: 460px;
+}
+
+.button {
+  padding: 10px 18px;
+  background: #0064e6;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 6px;
+}
+.button:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 20px;
+  }
+  .icon {
+    width: 56px;
+    height: 56px;
+  }
+}

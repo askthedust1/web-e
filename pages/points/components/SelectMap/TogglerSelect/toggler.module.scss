@@ -1,0 +1,38 @@
+.open {
+  background: $TEXT50;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $TEXT400;
+  padding: 0 10px;
+  width: 37%;
+  @media (min-width: $MAX_MOBILE_SIZE){
+    display: none;
+  }
+}
+.icon {
+  margin-left: 12px;
+}
+
+.close {
+  background: $YELLOW;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $BLACK;
+  padding: 0 10px;
+  width: 37%;
+  @media (min-width: $MAX_MOBILE_SIZE){
+    display: none;
+  }
+}

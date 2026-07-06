@@ -1,0 +1,11 @@
+$BREAK_POINT_DESKTOP: 1200px;
+$BREAK_POINT_SIZE: 960px;
+$BREAK_POINT_SMALL: 768px;
+$MAX_MOBILE_SIZE: 640px;
+$BREAK_POINT_XS: 480px;
+
+@mixin desktop { @media (max-width: $BREAK_POINT_DESKTOP) { @content; } }
+@mixin tablet { @media (max-width: $BREAK_POINT_SIZE) { @content; } }
+@mixin small { @media (max-width: $BREAK_POINT_SMALL) { @content; } }
+@mixin mobile { @media (max-width: $MAX_MOBILE_SIZE) { @content; } }
+@mixin xs { @media (max-width: $BREAK_POINT_XS) { @content; } }

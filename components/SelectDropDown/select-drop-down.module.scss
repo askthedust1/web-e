@@ -1,0 +1,40 @@
+.container {
+  background: var(--WHITE);
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.title {
+  color: var(--BLACK);
+}
+.icon {
+  color: var(--TEXT400);
+}
+.ol {
+  padding: 0 15px;
+  list-style: none;
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+.bottomLink {
+  text-decoration: none;
+  color: var(--BLACK);
+}
+.li {
+  margin: 12px 0;
+}
+.liTitle {
+  margin: 12px 0;
+  font-weight: 700 !important;
+  color: var(--BLUE);
+  display: flex;
+}
+.dropDownClose {
+  margin-left: 5px;
+  color: var(--BLUE);
+}

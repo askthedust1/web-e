@@ -1,0 +1,57 @@
+// === Base ===
+$WHITE: #ffffff;
+$BLACK: #13161b;
+
+// === Brand ===
+$BLUE: #156ce6;
+$BLUE_HOVER: #1059c5;
+$BLUE_DARK: #0f4f8d;
+$BLUE_BRAND_DARK: #0f52be;   // gradient start (design system)
+$BLUE_SKY: #73d0f6;           // голубой / tertiary
+$NAVY: #1e1e62;
+$NAVY_DARK: #1d246c;
+
+// === Gradients ===
+$HERO_GRADIENT: linear-gradient(135deg, #0f52be 0%, #156ce6 60%, #73d0f6 100%);
+
+// === Neutral Scale ===
+$BLUE10: #f9f9fb;
+$BLUE25: #f1f2f5;
+$BLUE30: #ffffff; // legacy alias for $WHITE — avoid using
+$BLUE150: #bcc4d0;
+$BLUE200: #97a3b7;
+$BLUE300: #7787a2;
+$BLUE400: #5f7292;
+$BLUE500: #4b5b76;
+$BLUE700: #2c3645;
+$BLUE900: #1c222b;
+$NEUTRAL_100: #f8f9fa;
+$NEUTRAL_400: #e9ecef;
+$NEUTRAL_500: #e5e5e5;
+$NEUTRAL_600: #e0e0e0;
+$NEUTRAL_700: #d3d3d3;
+$NEUTRAL_800: #dee2e6;
+
+// === Text ===
+$TEXT10: #f9f9fb;
+$TEXT50: #ebedf1;
+$TEXT400: #4c5c75;
+$TEXT600: #3c485c;
+
+// === Semantic ===
+$RED: #c9353f;
+$GREEN: #00a870;
+$GREEN_BRIGHT: #09c52b;
+$YELLOW: #8bc97e; // legacy name — actually green CTA color
+$YELLOW_HOVER: #34a13f; // legacy name — actually green CTA hover
+
+// === Interactive (Bootstrap-origin blues) ===
+$LINK: #007bff;
+$LINK_HOVER: #0056b3;
+
+$BLUE_GRADIENT: radial-gradient(
+    74.78% 74.78% at 68.12% 25.22%,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  )
+  linear-gradient(111.95deg, #3793ff 28.73%, #0017e4 100%);

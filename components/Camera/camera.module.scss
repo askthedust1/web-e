@@ -1,0 +1,99 @@
+.cameraContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 20px; // Add padding for smaller screens
+}
+
+.cameraView {
+  width: 100%;
+  max-width: 650px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+  background-color: #000;
+  border: 2px solid #3f3f3f;
+  max-height: 90vh; // Restrict height to avoid overflow
+}
+
+.controls {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; // Allow controls to wrap on small screens
+}
+
+.button,
+.retakenPhoto {
+  padding: 14px 30px;
+  background-color: #282828;
+  color: #e0e0e0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: 1px solid #4a4a4a;
+  flex: 1;
+  min-width: 120px;
+}
+
+.button:hover,
+.retakenPhoto:hover {
+  background-color: #4a4a4a;
+  transform: translateY(-2px);
+}
+
+.photoResult {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.capturedPhoto {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+  background-color: #000;
+  border: 2px solid #3f3f3f;
+}
+
+.retakenPhoto {
+  background-color: #d32f2f;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .cameraView {
+    max-width: 100%;
+  }
+
+  .button,
+  .retakenPhoto {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .photoResult {
+    gap: 15px;
+  }
+}

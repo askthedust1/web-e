@@ -1,0 +1,82 @@
+.card {
+  background: $WHITE;
+  box-shadow: $SHADOW_1;
+  border-radius: 12px;
+  padding: 30px 24px 24px 24px;
+  :global {
+    .react-tabs__tab-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      border: 1px solid var(--BLUE);
+      border-radius: 4px;
+      margin-bottom: 24px;
+      @media (max-width: 640px) {
+        width: 100%;
+        flex-wrap: wrap;
+      }
+    }
+    .react-tabs__tab {
+      color: var(--BLUE);
+      padding: 0 16px;
+      cursor: pointer;
+      height: 40px;
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.1s;
+      outline: none;
+      white-space: nowrap;
+      @media (max-width: 640px) {
+        flex: unset;
+        width: 100%;
+        padding: 0 24px;
+      }
+      &:not(:last-child) {
+        border-right: 1px solid var(--BLUE);
+        @media (max-width: 640px) {
+          border-right: 0;
+          border-bottom: 1px solid var(--BLUE);
+        }
+      }
+    }
+    .react-tabs__tab--selected {
+      background-color: var(--BLUE);
+      color: var(--WHITE) !important;
+    }
+    .react-tabs__tab-panel {
+    }
+    .react-tabs__tab-panel--selected {
+    }
+  }
+}
+.title {
+  margin-bottom: 24px;
+  color: $BLACK;
+}
+.currency__value {
+  color: $BLACK;
+}
+.currency__icon {
+  flex: 0 0 24px;
+  color: var(--BLUE150);
+  margin-right: 12px;
+}
+.currency__info {
+  padding: 6px 12px;
+  background: var(--BLUE10);
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.currency__text {
+  color: var(--BLUE500);
+}
+
+.date {
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: var(--BLUE);
+}

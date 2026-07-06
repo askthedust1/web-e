@@ -1,0 +1,105 @@
+.tableWrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table {
+  width: 100%;
+  max-width: 450px;
+}
+.table__th {
+  color: var(--BLUE);
+  padding: 5px 0px;
+  @media (max-width: 640px) {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 5px;
+  }
+}
+.table__td {
+  padding: 5px 0;
+  @media (max-width: 640px) {
+    font-size: 14px;
+  }
+}
+.currency {
+  display: flex;
+  align-items: center;
+  @media (max-width: 640px) {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+.icon {
+  margin-right: 20px;
+  border-radius: 4px;
+}
+.image {
+  margin-right: 20px;
+  min-width: 32px;
+  min-height: 25px;
+  @media (max-width: 640px) {
+    margin-right: 8px;
+  }
+}
+.currency__value {
+  @media (max-width: 640px) {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.cuption {
+  margin-left: 10px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: $TEXT400;
+}
+
+.comGrid {
+  margin-bottom: 10px;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+  &.active {
+    opacity: 1;
+    height: 51px;
+    visibility: visible;
+  }
+}
+
+.currency {
+  margin: 7px 17px 7px 0;
+  display: flex;
+}
+
+.icon {
+  border-radius: 6px;
+  object-fit: cover;
+  margin-right: 7px;
+}
+.subcuption {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: $BLACK;
+}
+
+.comTitle {
+  cursor: pointer;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.iconArrow {
+  transition: all 0.3s ease;
+  rotate: 270deg;
+  color: $TEXT400;
+  &.active {
+    rotate: 180deg;
+  }
+}

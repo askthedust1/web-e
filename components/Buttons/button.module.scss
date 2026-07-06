@@ -1,0 +1,129 @@
+.default {
+  /* Reset native button styles so <button> looks identical to the old <div> */
+  appearance: none;
+  border: none;
+  font: inherit;
+  position: relative;
+  background-color: var(--YELLOW);
+  border-radius: 8px;
+  padding: 0 24px;
+  color: $WHITE;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+  @media (max-width: 960px) {
+    width: 100%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 15px;
+  }
+  @media (max-width: 640px) {
+    font-size: 12px;
+    line-height: 24px;
+    height: 44px !important;
+  }
+  &:hover {
+    background-color: $YELLOW_HOVER;
+  }
+}
+.outline {
+  background-color: transparent;
+  border: 1px solid var(--BLUE);
+  color: var(--BLUE);
+  &:hover {
+    background-color: var(--BLUE_HOVER);
+    color: $WHITE;
+    border-color: var(--BLUE_HOVER);
+  }
+}
+.small {
+  height: 44px;
+}
+.medium {
+  height: 48px;
+}
+.large {
+  height: 56px;
+}
+.isLong {
+  width: 100%;
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.isGray {
+  background-color: var(--BLUE200);
+  color: $WHITE;
+  &:hover {
+    background-color: $YELLOW;
+    color: $BLACK;
+    border-color: $YELLOW;
+  }
+}
+.isBlue {
+  background-color: var(--BLUE);
+  color: $WHITE;
+  &:hover {
+    background-color: var(--BLUE);
+    // color: $BLACK;
+    // border-color: #266fe8;
+    opacity: 0.5;
+  }
+}
+
+.loading {
+  background-color: $YELLOW_HOVER;
+  position: relative;
+  opacity: 0.8;
+  &::before {
+    z-index: 999;
+    animation: spin 1s infinite;
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 58px;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    border: 10px solid transparent;
+    border-top-color: var(--BLUE);
+    @media (max-width: 640px) {
+      top: 6px;
+    }
+  }
+  &::after {
+    z-index: 998;
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 58px;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    border: 10px solid #ccc;
+    @media (max-width: 640px) {
+      top: 6px;
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+}

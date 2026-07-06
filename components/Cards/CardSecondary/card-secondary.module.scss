@@ -1,0 +1,70 @@
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--WHITE);
+  box-shadow: $SHADOW_1;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: 0.6s ease;
+  cursor: pointer;
+  &:hover {
+    -moz-transform: translate(5px, -14px);
+    -webkit-transform: translate(5px, -14px);
+    -o-transform: translate(5px, -14px);
+    -ms-transform: translate(5px, -14px);
+    transform: translate(5px, -14px);
+    .btn {
+      background-color: var(--BLUE);
+      color: $WHITE;
+    }
+  }
+}
+
+.info {
+  padding: 24px;
+  flex-grow: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.image {
+  object-fit: cover;
+  display: block;
+}
+.date {
+  color: var(--BLUE);
+  margin-bottom: 12px;
+}
+.title {
+  margin: 0;
+  color: $BLACK;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.decs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.key {
+  color: $TEXT400;
+}
+.value {
+  color: $BLACK;
+}

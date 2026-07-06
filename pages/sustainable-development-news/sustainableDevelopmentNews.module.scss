@@ -1,0 +1,35 @@
+.itemNews {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+    border-top: 1px solid #eee;
+}
+
+.time {
+    display: flex;
+    justify-content: left;
+    > div {
+
+        text-align: center;
+        > p {
+            font-size: 14px;
+            padding-top: 2px;
+            color: #888;
+    }
+    }
+}
+
+.contentText {
+    margin-left: 15px;
+    color: #0f4f8d;
+    cursor: pointer;
+    outline: 0 none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contentText:hover {
+    text-decoration: underline;
+}

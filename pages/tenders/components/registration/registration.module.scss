@@ -1,0 +1,44 @@
+.overlay {
+    position: absolute;
+    background-color: rgba(17, 17, 17, 0.2);
+    pointer-events: all;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 700;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.form {
+    z-index: 15;
+    background-color: var(--WHITE);
+    max-width: 790px;
+    width: 100%;
+    max-height: 944px;
+    height: 100%;
+    border-radius: 12px;
+    padding: 40px 30px;
+    overflow-y: scroll;
+    @media (max-width: 960px) {
+        width: 80%;
+        height: 70%;
+    }
+}
+
+.subTitle {
+}
+.cuption {
+    color: var(--RED);
+    font-weight: 700;
+    margin: 10px;
+}

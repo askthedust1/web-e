@@ -1,0 +1,52 @@
+.wrapper {
+  background: $WHITE;
+  box-shadow: 0 0 40px rgba(75, 91, 118, 0.1);
+  border-radius: 8px;
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+.active {
+  .icon {
+    color: $TEXT400;
+  }
+}
+.head {
+  padding: 24px 62px 24px 24px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.body {
+  padding: 20px 24px 24px 44px;
+  p {
+    font-weight: 500;
+    line-height: 24px;
+    margin: 0 0 10px 0;
+  }
+
+  @media (max-width: 640px) {
+    padding: 0px 24px 24px 24px;
+    p {
+      font-weight: 300;
+      font-size: 14px;
+    }
+  }
+}
+
+
+.icon {
+  color: var(--BLUE);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 24px;
+}
+
+.logo {
+  @media (max-width: 640px) {
+    display: none!important;;
+  }
+}

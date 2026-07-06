@@ -1,0 +1,80 @@
+.wrapper {
+  background: $BLUE25;
+  border-radius: 12px;
+  min-height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 30px;
+  margin-bottom: 40px;
+  @media (max-width: 960px) {
+    margin-top: 15px;
+  }
+  @media (max-width: 640px) {
+    margin-top: 25px;
+    min-height: 150px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+.button {
+  background-color: var(--YELLOW);
+  font-weight: 700;
+  width: 100%;
+  margin-left: 15px;
+}
+.authWrapper {
+  display: flex;
+  align-items: center;
+}
+.content {
+  margin-left: 16px;
+}
+.title {
+  color: var(--TEXT400);
+}
+.subtitle {
+  color: var(--BLACK);
+}
+.authIcon {
+  color: var(--BLUE);
+}
+.loginIcon {
+  color: var(--YELLOW);
+}
+.buttonOutline {
+  margin-left: 10px;
+  @media (max-width: 960px) {
+    margin-top: 10px;
+    margin-left: 0px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+.subtutle {
+  @media (max-width: 640px) {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+.buttonsWrapper {
+  display: flex;
+  align-items: center;
+  @media (max-width: 960px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+  }
+}
+.buttonsReg {
+  margin-left: 10px;
+  @media (max-width: 960px) {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  @media (max-width: 640px) {
+    margin-top: 10px;
+  }
+}

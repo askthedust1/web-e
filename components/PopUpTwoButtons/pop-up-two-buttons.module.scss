@@ -1,0 +1,73 @@
+.buttonWrapper {
+    display: flex;
+    align-items: center;
+    @media (max-width: $MAX_MOBILE_SIZE) {
+        flex-direction: column;
+    }
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 997;
+    width: 100%;
+    height: 100%;
+    // left: 4px;
+    top: 0;
+}
+
+.popUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 480px;
+    max-height: 416px;
+    background: $WHITE;
+    border-radius: 12px;
+    z-index: 999;
+    padding: 40px;
+    @media (max-width: $MAX_MOBILE_SIZE) {
+        width: 300px;
+    }
+}
+.title {
+    text-align: center;
+    margin: 15px 0;
+    @media (max-width: $MAX_MOBILE_SIZE) {
+        font-size: 18px !important;
+    }
+}
+.button {
+    font-size: 16px !important;
+    font-weight: 600;
+    margin-right: 15px;
+}
+.subtitle {
+    text-align: center;
+    color: $TEXT600;
+    margin-bottom: 32px;
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    background-color: rgba(17, 17, 17, 0.2);
+    pointer-events: all;
+}
+
+.image {
+    object-fit: scale-down;
+}
+
+.unickey {
+    // font-size: 32px !important;
+    // font-weight: 700;
+    // color: var(--BLACK);
+}
+.mainTitle {
+    text-align: center;
+}

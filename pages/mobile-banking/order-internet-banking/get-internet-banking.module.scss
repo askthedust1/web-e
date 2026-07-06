@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  justify-content: center;
+  @media (max-width: 960px) {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkboxBlock {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  margin: 32px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid $BLUE30;
+  padding-top: 32px;
+  @media (max-width: $BREAK_POINT_SIZE) {
+    flex-direction: column-reverse;
+    border: none;
+    margin: 0 0 15px 0;
+  }
+}
+.button {
+  width: 40%;
+  @media (max-width: 1200px) {
+    width: 60%;
+  }
+  @media (max-width: $BREAK_POINT_SIZE) {
+    min-width: 100%;
+    margin-bottom: 12px;
+  }
+}
+
+.title {
+  width: 60%;
+  @media (max-width: 1200px) {
+    width: 30%;
+  }
+  @media (max-width: $BREAK_POINT_SIZE) {
+    min-width: 100%;
+    text-align: center;
+  }
+}
+.link {
+  color: var(--BLUE);
+  text-decoration: none;
+}
+.part {
+  width: 50%;
+  @media (max-width: 960px) {
+    width: 100%;
+  }
+}

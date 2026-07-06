@@ -1,0 +1,438 @@
+// ════════════════════════════════════════════════════════
+// Кредитный калькулятор — современный дизайн
+// ════════════════════════════════════════════════════════
+
+.page {
+  max-width: 720px;
+  margin: 40px auto 80px;
+  padding: 0 16px;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    margin: 20px auto 40px;
+  }
+}
+
+// ── Заголовок ────────────────────────────────────────────
+
+.heading {
+  text-align: center;
+  margin-bottom: 32px;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    margin-bottom: 20px;
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  color: var(--BLACK);
+  margin: 0 0 8px;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--TEXT400, #6b7280);
+  margin: 0;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+// ── Карточка формы ───────────────────────────────────────
+
+.formCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 24px rgba(75, 91, 118, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    padding: 20px 16px;
+    border-radius: 12px;
+    gap: 16px;
+  }
+}
+
+// ── Поле (label + input + error) ─────────────────────────
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fieldLabel {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--TEXT400, #6b7280);
+  user-select: none;
+}
+
+.inputWrap {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  height: 56px;
+  padding: 0 80px 0 18px;
+  background: #f7f9fc;
+  border: 1.5px solid transparent;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--BLACK);
+  outline: none;
+  transition: all 0.15s ease;
+  font-variant-numeric: tabular-nums;
+
+  &::placeholder {
+    color: #9ba3af;
+    font-weight: 400;
+  }
+
+  &:hover {
+    background: #f0f4fa;
+  }
+
+  &:focus {
+    background: #ffffff;
+    border-color: var(--BLUE);
+    box-shadow: 0 0 0 4px rgba(0, 91, 187, 0.08);
+  }
+
+  // скрываем стрелки number input
+  &[type='number']::-webkit-outer-spin-button,
+  &[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    height: 50px;
+    font-size: 16px;
+    padding: 0 64px 0 14px;
+  }
+}
+
+.inputError {
+  border-color: var(--RED, #e54545);
+  background: #fff5f5;
+
+  &:focus {
+    border-color: var(--RED, #e54545);
+    box-shadow: 0 0 0 4px rgba(229, 69, 69, 0.1);
+  }
+}
+
+.inputSuffix {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--TEXT400, #9ba3af);
+  pointer-events: none;
+  user-select: none;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    right: 14px;
+    font-size: 13px;
+  }
+}
+
+.errorText {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--RED, #e54545);
+  padding-left: 2px;
+}
+
+// ── Кнопка ───────────────────────────────────────────────
+
+.submitBtn {
+  margin-top: 12px;
+  height: 56px !important;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    height: 50px !important;
+    margin-top: 4px;
+  }
+}
+
+// ── Карточка результата ──────────────────────────────────
+
+.resultCard {
+  margin-top: 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 24px rgba(75, 91, 118, 0.08);
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 16px;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    flex-direction: column;
+    padding: 20px 16px;
+    gap: 0;
+    border-radius: 12px;
+  }
+}
+
+.statBlock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 0;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    padding: 14px 0;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.statDivider {
+  width: 1px;
+  background: #e5e9f0;
+  align-self: stretch;
+  flex-shrink: 0;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+.statLabel {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--TEXT400, #6b7280);
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.statValue {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+  color: var(--BLUE);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.3px;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.statValueSm {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--BLACK);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.2px;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+// ── График платежей ──────────────────────────────────────
+
+.scheduleBlock {
+  margin-top: 32px;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    margin-top: 24px;
+  }
+}
+
+.scheduleTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--BLACK);
+  margin: 0 0 16px;
+  text-align: left;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+.tableWrap {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(75, 91, 118, 0.08);
+  overflow: hidden;
+  width: 100%;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    border-radius: 12px;
+    overflow-x: auto;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+
+  thead {
+    background: #f7f9fc;
+
+    tr {
+      border-bottom: 1px solid #e5e9f0;
+    }
+
+    th {
+      padding: 14px 16px;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--TEXT400, #6b7280);
+      text-align: right;
+      white-space: nowrap;
+
+      &:first-child {
+        text-align: center;
+        width: 60px;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid #f0f3f8;
+      transition: background 0.1s;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background: #f7f9fc;
+      }
+    }
+
+    td {
+      padding: 14px 16px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--BLACK);
+      text-align: right;
+      white-space: nowrap;
+
+      @media (max-width: $MAX_MOBILE_SIZE) {
+        padding: 10px 12px;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.tdNum {
+  text-align: center !important;
+  font-weight: 600 !important;
+  color: var(--BLUE) !important;
+}
+
+.tdInterest {
+  color: var(--TEXT400, #6b7280) !important;
+}
+
+.tdBalance {
+  font-weight: 600 !important;
+}
+
+// ── Добавить в calculator.module.scss после .heading ──
+
+.tabs {
+  display: flex;
+  background: #f0f4fa;
+  padding: 4px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  width: 100%;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    margin-bottom: 16px;
+  }
+}
+
+.tab {
+  flex: 1;
+  height: 44px;
+  padding: 0 16px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--TEXT400, #6b7280);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+
+  &:hover:not(.tabActive) {
+    color: var(--BLACK);
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    height: 40px;
+    font-size: 13px;
+    padding: 0 12px;
+  }
+}
+
+.tabActive {
+  background: #ffffff;
+  color: var(--BLUE);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(75, 91, 118, 0.1);
+
+  &:hover {
+    background: #ffffff;
+  }
+}

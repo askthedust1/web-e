@@ -1,0 +1,19 @@
+.page{
+    display: block;
+}
+.link{
+    text-decoration: none;
+    color: $BLACK;
+}
+
+.eldikWrapper {
+    p {
+        margin-top: 14px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+      }
+}

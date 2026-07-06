@@ -1,0 +1,79 @@
+.container {
+    display: flex;
+    justify-content: center;
+    @media (max-width: $BREAK_POINT_SIZE) {
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkboxBlock {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    @media (max-width: $BREAK_POINT_SIZE) {
+        margin-top: 12px;
+    }
+}
+.block {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ebedf1;
+}
+
+.info {
+    margin: 32px 0;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    border-top: 1px solid $BLUE30;
+    padding-top: 32px;
+}
+.button {
+    max-width: 173px;
+    @media (max-width: $BREAK_POINT_SIZE) {
+        min-width: 100%;
+    }
+}
+
+.title {
+    width: 60%;
+}
+.link {
+    color: var(--BLUE);
+    text-decoration: none;
+}
+.part {
+    max-width: 50%;
+    @media (max-width: $BREAK_POINT_SIZE) {
+        max-width: 100%;
+    }
+}
+.section {
+    margin-top: 20px;
+}
+
+.subtitle {
+    margin-bottom: 15px;
+    @media (max-width: $MAX_MOBILE_SIZE) {
+        width: 100%;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+.buttonWrapper {
+    margin: 20px;
+}

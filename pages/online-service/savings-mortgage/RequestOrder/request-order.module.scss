@@ -1,0 +1,105 @@
+.container {}
+
+.wrapper {
+  display: flex;
+  @media (max-width: $BREAK_POINT_SIZE) {
+    flex-direction: column;
+  }
+}
+
+.checkboxBlock {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  @media (max-width: $BREAK_POINT_SIZE) {
+    margin-top: 12px;
+  }
+}
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.table {
+  //margin-left: 30px;
+  //margin: 20px 0;
+  @media (max-width: $BREAK_POINT_SIZE) {
+    margin-left: 0;
+  }
+}
+
+.info {
+  margin: 32px 0;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  border-top: 1px solid $BLUE30;
+  padding-top: 32px;
+  flex-wrap: wrap;
+  @media (max-width: $BREAK_POINT_SIZE) {
+    border: none;
+    margin-top: 0;
+    padding-top: 15px;
+  }
+}
+.button {
+  max-width: 193px;
+  @media (max-width: $BREAK_POINT_SIZE) {
+    min-width: 100%;
+    margin-right: 0!important;
+  }
+}
+
+.scheduleButton {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.title {
+  width: 60%;
+}
+.link {
+  color: var(--BLUE);
+  text-decoration: none;
+}
+.part {
+  max-width: 50%;
+  @media (max-width: $BREAK_POINT_SIZE) {
+    max-width: 100%;
+    //display: none;
+  }
+}
+
+.info_block {
+  display: block;
+  @media (max-width: $BREAK_POINT_SIZE) {
+    display: none;
+  }
+}
+
+.info_block2 {
+  display: none;
+}
+.margin40 {
+  margin-top: 20px;
+}
+
+.buttonText {
+  //font-size: 16px;
+}
+
+.buttonTable {
+  margin-top: -20px;
+}
+
+.info_block2 {
+  @media (max-width: $BREAK_POINT_SIZE) {
+    display: block;
+  }
+}

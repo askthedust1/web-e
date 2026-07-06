@@ -1,0 +1,36 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+  margin-top: 40px;
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+}
+.card {
+  max-width: 270px;
+  min-height: 100px;
+  padding: 25px 10px;
+  text-align: center;
+  background: $WHITE;
+  box-shadow: $SHADOW_2;
+  border-radius: 12px;
+  transition: 0.6s ease;
+  cursor: pointer;
+  &:hover {
+    -moz-transform: translate(5px, -14px);
+    -webkit-transform: translate(5px, -14px);
+    -o-transform: translate(5px, -14px);
+    -ms-transform: translate(5px, -14px);
+    transform: translate(5px, -14px);
+  }
+  @media (max-width: 960px) {
+    // min-height: 100%;
+    max-width: 100%;
+  }
+}
+.title {
+  color: $TEXT400;
+  padding: 0 0 10px 0;
+}

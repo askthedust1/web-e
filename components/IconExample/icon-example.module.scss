@@ -1,0 +1,16 @@
+.item {
+  padding: 20px;
+  background-color: var(--BLUE10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--BLUE25);
+  }
+}
+.title {
+  text-align: center;
+  margin-top: 20px;
+}

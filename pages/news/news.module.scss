@@ -1,0 +1,159 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.newsWrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  margin-top: 0;
+  @media (max-width: 640px) {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+.date {
+  color: var(--BLUE);
+  font-weight: 600;
+}
+.imgWrapper {
+  border-radius: 12px;
+  width: 100%;
+  object-fit: cover;
+  max-height: 460px;
+  @media (max-width: 640px) {
+    object-fit: contain;
+    max-height: none;
+    background: #fff;
+    border-radius: 12px;
+  }
+}
+.subtitle {
+  color: $BLACK;
+  margin-top: 30px;
+  margin-bottom: 24px;
+  @media (max-width: 640px) {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.cuption {
+  color: $TEXT600;
+  margin-bottom: 60px;
+  @media (max-width: 640px) {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+}
+
+.searchWrapper {
+  flex: 1;
+  min-width: 240px;
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    min-width: unset;
+  }
+}
+
+.searchInput {
+  width: 100% !important;
+}
+
+.dateRange {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    width: 100%;
+  }
+}
+
+.dateInputWrapper {
+  position: relative;
+  height: 40px;
+  border: 1px solid $TEXT50;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  background: $WHITE;
+  transition: border-color 0.15s;
+  &:focus-within {
+    border-color: $BLUE;
+  }
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    flex: 1;
+  }
+}
+
+.dateInput {
+  border: none;
+  height: 100%;
+  width: 120px;
+  padding: 0 10px;
+  font-size: 14px;
+  color: $BLACK;
+  background: transparent;
+  outline: none;
+  letter-spacing: 0.5px;
+  &::placeholder {
+    color: $BLUE200;
+    letter-spacing: 0;
+  }
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    width: 100%;
+  }
+}
+
+.calendarIcon {
+  color: $BLUE200;
+  margin-right: 10px;
+  flex-shrink: 0;
+  transition: color 0.15s;
+  .dateInputWrapper:focus-within & {
+    color: $BLUE;
+  }
+}
+
+.dateSeparator {
+  color: $BLUE200;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.pagination {
+  margin-top: 40px;
+}
+.image {
+  object-fit: scale-down;
+}
+
+.banner {
+  margin: 10px 0 30px 0;
+}

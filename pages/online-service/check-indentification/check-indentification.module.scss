@@ -1,0 +1,22 @@
+.form {
+    flex-direction: column;
+    max-width: 585px;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto ;
+}
+
+.status {
+}
+.green {
+    color: var(--GREEN);
+}
+.yellow {
+    color: var(--YELLOW);
+}
+.blue {
+    color: var(--BLUE);
+}
+.red {
+    color: var(--RED);
+}

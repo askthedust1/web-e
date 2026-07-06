@@ -1,0 +1,64 @@
+.checkbox {
+  margin-right: 15px;
+  color: var(--BLUE);
+}
+.block {
+  display: flex;
+  margin-right: 25px;
+  flex-wrap: wrap;
+  align-items: center;
+  @media (max-width: 960px) {
+    margin-bottom: 20px;
+  }
+}
+
+.activeCheckbox {
+  color: var(--BLUE);
+}
+
+.defaultCheckbox {
+  color: var(--BLUE);
+  margin-right: 15px;
+  border-radius: 1px solid var(--RED);
+  width: 33px;
+  height: 33px;
+}
+
+.checkbox[type='radio'],
+.checkbox[type='checkbox'] {
+  display: none;
+}
+
+.checkboxBlock {
+  display: flex;
+  margin: 20px 24px 20px 0;
+  align-items: center;
+  cursor: pointer;
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+.label {
+  margin-right: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.error {
+  color: $RED;
+}
+.iconWrapper {
+  margin-right: 10px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid var(--YELLOW);
+}
+.disabled {
+  color: #bcc4d0;
+}
+
+.cuption {
+  font-size: 11px;
+  color: var(--RED);
+}

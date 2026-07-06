@@ -1,0 +1,240 @@
+.container {
+  display: flex;
+  justify-content: center;
+  @media (max-width: $BREAK_POINT_SIZE) {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkboxBlock {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  @media (max-width: $BREAK_POINT_SIZE) {
+    margin-top: 12px;
+  }
+}
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  margin: 32px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid $BLUE30;
+  padding-top: 32px;
+ 
+  @media (max-width: $BREAK_POINT_SIZE) {
+    flex-direction: column-reverse;
+    border: none;
+    margin: 0 0 15px 0;
+  }
+}
+.button {
+  width: 40%;
+  @media (max-width: 1200px) {
+    width: 60%;
+  }
+  @media (max-width: $BREAK_POINT_SIZE) {
+    min-width: 100%;
+    margin-bottom: 12px;
+  }
+}
+
+.title {
+  width: 60%;
+  @media (max-width: 1200px) {
+    width: 30%;
+  }
+  @media (max-width: $BREAK_POINT_SIZE) {
+    min-width: 100%;
+    text-align: center;
+  }
+}
+.link {
+  color: var(--BLUE);
+  text-decoration: none;
+}
+.part {
+  width: 50%;
+  @media (max-width: $BREAK_POINT_SIZE) {
+    width: 100%;
+  }
+}
+.subtitle {
+  margin-bottom: 15px;
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    margin: 0;
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+}
+
+.row {
+  display: flex;
+  max-width: 586px;
+  justify-content: space-between;
+  @media (max-width: $BREAK_POINT_SIZE) {
+    flex-direction: column;
+    max-width: 100%;
+    margin-top: 12px;
+  }
+}
+
+.photoWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 17px;
+  grid-row-gap: 0px;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.deliveryContainer {
+  padding: 40px;
+  max-width: 480px;
+  min-height: 620px;
+  background: $WHITE;
+  box-shadow: $SHADOW_2;
+  border-radius: 16px;
+  margin-left: 135px;
+  margin-top: 24px; // Отступ между CardInfoBig и картой
+
+  @media (max-width: 1200px) {
+    margin-left: 10%;
+  }
+
+  @media (max-width: 960px) {
+    margin: 24px auto;
+    padding: 20px 16px;
+    max-width: 100%;
+    min-height: auto;
+  }
+}
+
+// Стили для изображения
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+// Стили для зон доставки
+.deliveryZones {
+  margin-top: 24px;
+  padding: 20px;
+  background: $NEUTRAL_100;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+
+  @media (max-width: 960px) {
+    padding: 16px;
+  }
+}
+
+.deliveryTitle {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #212529;
+
+  @media (max-width: 960px) {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+}
+
+.zonesList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.zoneItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+
+  @media (max-width: 960px) {
+    padding: 6px 0;
+    gap: 8px;
+  }
+}
+
+.zoneColor {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 960px) {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.zoneName {
+  font-weight: 600;
+  color: #212529;
+  min-width: 60px;
+
+  @media (max-width: 960px) {
+    min-width: 55px;
+    font-size: 14px;
+  }
+}
+
+.zonePrice {
+  color: #495057;
+  font-weight: 500;
+
+  @media (max-width: 960px) {
+    font-size: 14px;
+  }
+}
+
+.deliveryNote {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed #dee2e6;
+  color: #6c757d;
+  font-size: 14px;
+  font-style: italic;
+
+  @media (max-width: 960px) {
+    font-size: 13px;
+    margin-top: 12px;
+    padding-top: 12px;
+  }
+}
+
+// Адаптивные стили
+@media (max-width: 768px) {
+  .deliveryContainer {
+    margin-top: 16px;
+  }
+}

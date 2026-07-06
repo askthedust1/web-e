@@ -1,0 +1,49 @@
+.card {
+  background: $WHITE;
+  box-shadow: 0 0 40px rgba(75, 91, 118, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px auto;
+  align-items: center;
+  grid-gap: 16px;
+  transition: 0.6s ease;
+  &:hover {
+    cursor: pointer;
+    &:hover {
+      -moz-transform: translate(0px, -5px);
+      -webkit-transform: translate(0px, -5px);
+      -o-transform: translate(0px, -5px);
+      -ms-transform: translate(0px, -5px);
+      transform: translate(0px, -5px);
+    }
+  }
+}
+.cardIcon {
+  padding: 24px 48px 24px 24px;
+}
+.cardRevert {
+  grid-template-columns: 1fr 48px;
+}
+.link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+.icon {
+  opacity: 0.4;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 24px;
+}
+.title {
+  color: $BLACK;
+}
+.image {
+  
+}
