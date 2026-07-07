@@ -10,27 +10,52 @@
 }
 
 .label {
-  color: $BLUE200;
+  color: $WHITE;
   margin-bottom: 8px;
   text-transform: lowercase;
+  font-size: 32px;
+  font-weight: 700;
+
+  @include mobile {
+    font-size: 20px;
+  }
 }
 
 .title {
   margin: 0;
-  font-weight: 800;
-  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 500;
+  font-size: clamp(48px, 8vw, 128px);
   line-height: 1.05;
   letter-spacing: 1px;
-  background: linear-gradient(180deg, $WHITE 0%, $BLUE200 60%, $BLUE500 100%);
+  /* Металлический эффект: полупрозрачный серебристый градиент поверх белой основы */
+  background: linear-gradient(
+      267.61deg,
+      rgba(147, 147, 147, 0.6) 3.81%,
+      rgba(63, 63, 63, 0.6) 19.33%,
+      rgba(197, 197, 197, 0.6) 30.73%,
+      rgba(83, 83, 83, 0.6) 45.64%,
+      rgba(180, 180, 180, 0.6) 59.48%,
+      rgba(115, 115, 115, 0.6) 78.64%,
+      rgba(141, 141, 141, 0.6) 98.72%
+    ),
+    linear-gradient(0deg, #ffffff, #ffffff);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  /* Drop shadow из Figma: X2 Y3 blur1.4, #000 25% */
+  filter: drop-shadow(2px 3px 1.4px rgba(0, 0, 0, 0.25));
 }
 
 .subtitle {
-  color: $BLUE150;
+  color: $WHITE;
   margin-top: 8px;
   margin-bottom: 32px;
+  font-size: 32px;
+  font-weight: 700;
+
+  @include mobile {
+    font-size: 20px;
+  }
 }
 
 .button {

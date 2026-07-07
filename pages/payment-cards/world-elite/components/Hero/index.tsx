@@ -4,11 +4,9 @@ import style from './hero.module.scss'
 const Hero = () => {
   return (
     <div className={style.wrapper}>
-      <p className={`regular-18 ${style.label}`}>премиальная карта</p>
+      <p className={style.label}>премиальная карта</p>
       <h1 className={style.title}>World Elite</h1>
-      <p className={`regular-18 ${style.subtitle}`}>
-        новый уровень привилегий
-      </p>
+      <p className={style.subtitle}>новый уровень привилегий</p>
       <Button
         value="Заказать карту"
         href="/bank-cards/order-card"
