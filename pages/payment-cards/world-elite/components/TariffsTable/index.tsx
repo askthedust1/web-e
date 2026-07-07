@@ -1,5 +1,5 @@
 import Button from 'components/Buttons/Button'
-import CardsMock from './CardsMock'
+import Image from 'next/image'
 import style from './tariffs-table.module.scss'
 
 interface Row {
@@ -68,7 +68,12 @@ const TariffsTable = () => {
           ))}
         </div>
         <div className={style.cardsImage}>
-          <CardsMock />
+          <Image
+            src="/images/we-card/cards1.png"
+            alt="Карты World Elite"
+            width={520}
+            height={440}
+          />
         </div>
       </div>
       <div className={style.actions}>

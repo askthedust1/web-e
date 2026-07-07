@@ -104,9 +104,21 @@
   flex: 1 1 42%;
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 520px;
+    object-fit: contain;
+  }
 
   @include tablet {
     order: -1;
+
+    img {
+      max-width: 400px;
+    }
   }
 }
 
