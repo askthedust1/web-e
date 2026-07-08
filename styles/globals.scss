@@ -108,3 +108,28 @@ button {
   align-items: center; 
   justify-content: center; 
 }
+
+/* ===== World Elite — тёмная тема шапки и футера ===== */
+/* Класс we-dark-theme навешивается на body только на странице /payment-cards/world-elite */
+body.we-dark-theme header,
+body.we-dark-theme header > div {
+  background-color: $BLACK !important;
+}
+
+/* Contact-блок и футер — прямые div-сиблинги после <main> */
+body.we-dark-theme main ~ div {
+  background-color: $BLACK !important;
+}
+
+/* Светлый текст в шапке и футере (цветные кнопки сохраняют свой фон) */
+body.we-dark-theme header a,
+body.we-dark-theme header p,
+body.we-dark-theme header span,
+body.we-dark-theme main ~ div a,
+body.we-dark-theme main ~ div p,
+body.we-dark-theme main ~ div span,
+body.we-dark-theme main ~ div h1,
+body.we-dark-theme main ~ div h2,
+body.we-dark-theme main ~ div h3 {
+  color: $WHITE !important;
+}

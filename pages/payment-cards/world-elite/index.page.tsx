@@ -1,5 +1,6 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
+import { useEffect } from 'react'
 import BreadCrumbsCustom from 'components/BreadCrumbsCustom'
 import Hero from './components/Hero'
 import VideoBlock from './components/VideoBlock'
@@ -7,7 +8,15 @@ import Benefits from './components/Benefits'
 import TariffsTable from './components/TariffsTable'
 import style from './world-elite.module.scss'
 
+const DARK_THEME_CLASS = 'we-dark-theme'
+
 const WorldElitePage: NextPage = () => {
+  // Тёмная тема шапки и футера только на этой странице
+  useEffect(() => {
+    document.body.classList.add(DARK_THEME_CLASS)
+    return () => document.body.classList.remove(DARK_THEME_CLASS)
+  }, [])
+
   return (
     <div className={style.wrapper}>
       <Head>
