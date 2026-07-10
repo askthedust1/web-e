@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import clsx from 'clsx'
 import Container from 'components/Container'
 import FooterAboutBank from 'components/Footer/FooterAboutBank'
 import FooterContact from 'components/Footer/FooterContact'
@@ -10,13 +11,14 @@ import style from './footer.module.scss'
 interface Props {
   data: FooterProps[] | null
   contact: SiteSettingProps | null
+  dark?: boolean
 }
 
-const Footer: FC<Props> = ({ data, contact }) => {
+const Footer: FC<Props> = ({ data, contact, dark = false }) => {
   const isMobile = useMediaQuery({ maxWidth: 960 })
   const isVisible = isMobile ? true : false
   return (
-    <div className={style.footer}>
+    <div className={clsx(style.footer, dark && style.dark)}>
       <Container>
         <div className={style.footer__grid}>
           {!isVisible

@@ -96,3 +96,18 @@
     fill: #0a367e!important;
   }
 }
+
+/* ===== Тёмная тема контакт-блока (страница World Elite) ===== */
+.section.dark {
+  margin-top: 0;
+  background-color: $BLUE700;
+  border-top-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+
+  .action__label {
+    color: $BLUE200;
+  }
+  .action__value {
+    color: $WHITE;
+  }
+}

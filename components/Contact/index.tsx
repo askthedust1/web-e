@@ -1,5 +1,6 @@
 import Container from 'components/Container'
 import Icon from 'components/Icon'
+import clsx from 'clsx'
 import style from './contact.module.scss'
 import { FC } from 'react'
 import { SiteSettingProps } from 'services/api/LayoutModule'
@@ -7,13 +8,14 @@ import { useTranslation } from 'next-i18next'
 
 interface Props {
   contact: SiteSettingProps | null
+  dark?: boolean
 }
 
-const Contact: FC<Props> = ({ contact }) => {
+const Contact: FC<Props> = ({ contact, dark = false }) => {
   const { t } = useTranslation()
 
   return (
-    <div className={style.section}>
+    <div className={clsx(style.section, dark && style.dark)}>
       <Container>
         <div className={style.side}>
           <div className={style.side__left}>

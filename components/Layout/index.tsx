@@ -23,6 +23,9 @@ const Layout: React.FC<Layout> = ({ children }: Layout) => {
     (item) => item.label === Router.pathname
   )
 
+  // Тёмная тема футера/контакта только на странице World Elite
+  const isDarkTheme = Router.pathname.startsWith('/payment-cards/world-elite')
+
   const getData = async () => {
     try {
       const layOutInfo = await LayoutApi.getHeader(
@@ -67,8 +70,8 @@ const Layout: React.FC<Layout> = ({ children }: Layout) => {
         data={headerData}
       />
       <main id="main-content">{children}</main>
-      <Contact contact={setting} />
-      <Footer data={footerData} contact={setting} />
+      <Contact contact={setting} dark={isDarkTheme} />
+      <Footer data={footerData} contact={setting} dark={isDarkTheme} />
     </>
   )
 }

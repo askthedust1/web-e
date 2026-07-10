@@ -182,3 +182,30 @@
     margin-bottom: 20px;
   }
 }
+
+/* ===== Тёмная тема футера (страница World Elite) ===== */
+.footer.dark {
+  background-color: $BLUE700;
+
+  .title {
+    color: $WHITE;
+  }
+  .link {
+    color: $BLUE150;
+    &:hover {
+      color: $WHITE;
+    }
+  }
+  .link__pdf {
+    color: $BLUE_SKY;
+  }
+  .label {
+    color: $BLUE200;
+  }
+  .subLink {
+    color: $WHITE;
+  }
+  .subLinkBlue {
+    color: $BLUE_SKY;
+  }
+}
