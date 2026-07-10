@@ -1,44 +1,13 @@
+import { useState } from 'react'
 import Container from 'components/Container'
 import BenefitItem from '../BenefitItem'
+import BenefitModal from '../BenefitModal'
+import { BENEFITS, Benefit } from './benefits.data'
 import style from './benefits.module.scss'
 
-const BENEFITS = [
-  {
-    icon: '/images/we-card/ic1.png',
-    title: 'Безлимитный доступ в бизнес-залы LoungeKey',
-    desc: 'До 500 000 сомов + грайс период 45 дней',
-  },
-  {
-    icon: '/images/we-card/ic2.png',
-    title: 'Fast Track без ограничений',
-    desc: 'Приоритетное прохождение предполетного контроля в аэропортах без очереди',
-    reverse: true,
-  },
-  {
-    icon: '/images/we-card/ic3.png',
-    title: 'Cashback 2%',
-    desc: 'Получайте 2% cashback за покупки в торговых точках и оплату товаров и услуг в интернете',
-  },
-  {
-    icon: '/images/we-card/ic4.png',
-    title: 'Бесплатный роуминг данных по всему миру',
-    desc: 'До 3 ГБ мобильного интернета в год через Flexiroam для устройств с поддержкой eSIM',
-    reverse: true,
-  },
-  {
-    icon: '/images/we-card/ic5.png',
-    title: 'Медицинское страхование',
-    desc: 'во время поездок до 500 000 долларов США. Расширенное страхование путешествий и защита багажа',
-  },
-  {
-    icon: '/images/we-card/ic6.png',
-    title: 'Обслуживание без очереди',
-    desc: 'во всех областных филиалах Элдик Банка',
-    reverse: true,
-  },
-]
-
 const Benefits = () => {
+  const [selected, setSelected] = useState<Benefit | null>(null)
+
   return (
     <div className={style.wrapper}>
       <Container>
@@ -52,9 +21,11 @@ const Benefits = () => {
             title={item.title}
             desc={item.desc}
             reverse={item.reverse}
+            onClick={() => setSelected(item)}
           />
         ))}
       </Container>
+      <BenefitModal benefit={selected} onClose={() => setSelected(null)} />
     </div>
   )
 }

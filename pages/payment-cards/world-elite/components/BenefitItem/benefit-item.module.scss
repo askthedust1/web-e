@@ -1,4 +1,12 @@
 .wrapper {
+  /* сброс стилей кнопки */
+  appearance: none;
+  border: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
   position: relative;
   display: flex;
   align-items: center;
@@ -18,6 +26,11 @@
   padding: 24px 48px;
   margin-bottom: 24px;
   overflow: visible;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  }
 
   @include mobile {
     padding: 20px;
