@@ -407,6 +407,14 @@
   .banner {
     background: #1f2732;
   }
+  /* Иконка колл-центра 9111 — белая */
+  .support__icon img {
+    filter: brightness(0) invert(1);
+  }
+  /* Кнопки App Store / Google Play — белые */
+  .banner__app img {
+    filter: invert(1);
+  }
   .support {
     color: $WHITE;
   }
