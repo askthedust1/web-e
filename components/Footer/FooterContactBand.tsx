@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next'
 import { SiteSettingProps } from 'services/api/LayoutModule'
 import s from './footer.module.scss'
 import {
-  PhoneIcon,
+  WhatsappIcon,
   HeartIcon,
   LocationIcon,
   MailIcon,
@@ -90,7 +90,7 @@ const FooterContactBand: FC<Props> = ({ data }) => {
         {data?.contact_center_phone && (
           <a className={s.contactItem} href={`tel:${phoneHref}`}>
             <span className={s.contactItem__icon}>
-              <PhoneIcon />
+              <WhatsappIcon />
             </span>
             <span className={s.contactItem__text}>
               <span className={s.contactItem__label}>Телефон</span>
