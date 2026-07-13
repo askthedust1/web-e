@@ -46,10 +46,12 @@ const Footer: FC<Props> = ({ data, contact, dark = false }) => {
                     )
                 )}
           </div>
+        </Container>
 
-          {/* Баннер приложения */}
-          <FooterBanner data={contact} />
+        {/* Баннер приложения — на всю ширину карточки */}
+        <FooterBanner data={contact} />
 
+        <Container>
           {/* Низ — строка контактов */}
           <FooterContactBand data={contact} />
         </Container>

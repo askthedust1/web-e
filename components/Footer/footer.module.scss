@@ -230,41 +230,48 @@
   }
 }
 
-/* ===== Баннер приложения ===== */
+/* ===== Баннер приложения — на всю ширину карточки ===== */
 .banner {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 24px;
-  margin-top: 40px;
-  padding: 0;
-  min-height: 220px;
-  border-radius: 24px;
+  margin: 40px 0;
+  min-height: 240px;
+  /* Скругление только у левого-верхнего и правого-нижнего угла */
+  border-radius: 40px 0 40px 0;
   background: #2b3442;
-  overflow: hidden;
 
   @media (max-width: $BREAK_POINT_SIZE) {
     flex-direction: column;
     text-align: center;
     min-height: unset;
     padding: 28px 20px;
-    gap: 20px;
+    border-radius: 24px 0 24px 0;
   }
 }
-.banner__media {
-  /* Место под изображение телефонов (добавляется отдельно) */
-  flex: 0 0 42%;
-  align-self: stretch;
-  min-height: 220px;
+.banner__img {
+  position: absolute;
+  left: 40px;
+  bottom: 0;
+  width: 44%;
+  max-width: 620px;
+  height: auto;
+  /* Картинка выходит за верхнюю границу баннера */
+  pointer-events: none;
 
   @media (max-width: $BREAK_POINT_SIZE) {
-    display: none;
+    position: static;
+    width: 80%;
+    max-width: 320px;
+    margin: 0 auto 16px;
   }
 }
 .banner__content {
-  flex: 1 1 auto;
-  padding: 32px 48px 32px 0;
+  margin-left: 50%;
+  padding: 32px 56px 32px 0;
 
   @media (max-width: $BREAK_POINT_SIZE) {
+    margin-left: 0;
     padding: 0;
   }
 }
@@ -318,6 +325,12 @@
   width: 60px;
   height: 60px;
   display: inline-flex;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
 .support__num {
   display: flex;

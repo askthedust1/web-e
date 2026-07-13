@@ -4,7 +4,6 @@ import { useTranslation } from 'next-i18next'
 import { SiteSettingProps } from 'services/api/LayoutModule'
 import s from './footer.module.scss'
 import {
-  SupportIcon,
   PhoneIcon,
   HeartIcon,
   LocationIcon,
@@ -31,7 +30,8 @@ const FooterContactBand: FC<Props> = ({ data }) => {
       <div className={s.contactBand__brand}>
         <div className={s.support}>
           <span className={s.support__icon}>
-            <SupportIcon />
+            {/* eslint-disable-next-line no-restricted-syntax */}
+            <img src="/images/call.svg" alt="" />
           </span>
           <span className={s.support__num}>
             <span className={s.support__small}>24/7</span>

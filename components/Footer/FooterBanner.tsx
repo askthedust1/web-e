@@ -9,8 +9,9 @@ interface Props {
 const FooterBanner: FC<Props> = ({ data }) => {
   return (
     <div className={s.banner}>
-      {/* Место под изображение телефонов — вставьте картинку сюда */}
-      <div className={s.banner__media} />
+      {/* Изображение телефонов — выходит за границу баннера */}
+      {/* eslint-disable-next-line no-restricted-syntax */}
+      <img className={s.banner__img} src="/images/footer-mob.png" alt="" />
 
       <div className={s.banner__content}>
         <p className={`medium-28 ${s.banner__title}`}>
