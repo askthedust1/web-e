@@ -102,3 +102,14 @@ export const InstagramIcon = () => (
     <circle cx="16.4" cy="7.6" r="1.1" fill="currentColor" />
   </svg>
 )
+
+export const DocumentIcon = () => (
+  <svg viewBox="0 0 24 24" width="100%" height="100%" fill="none">
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M6 2h7l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm7 1.6V7h3.4L13 3.6ZM8 12h8v1.5H8V12Zm0 3.4h8v1.5H8v-1.5Z"
+      fill="currentColor"
+    />
+  </svg>
+)

@@ -401,6 +401,9 @@
   font-size: 16px;
   color: $BLACK;
 }
+.contactItem__link {
+  text-decoration: underline;
+}
 
 /* ===== Тёмная тема: баннер и контакты ===== */
 .footer.dark {

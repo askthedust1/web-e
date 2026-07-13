@@ -8,6 +8,7 @@ import {
   HeartIcon,
   LocationIcon,
   MailIcon,
+  DocumentIcon,
   FacebookIcon,
   TelegramIcon,
   YoutubeIcon,
@@ -19,10 +20,14 @@ interface Props {
 }
 
 const FooterContactBand: FC<Props> = ({ data }) => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const phoneHref = data?.contact_center_phone
     ? data.contact_center_phone.replace(/[^\d+]/g, '')
     : ''
+  const whistleblowingPolicyHref =
+    i18n.language === 'en'
+      ? '/files/Whistleblowing_Policy.pdf'
+      : '/files/Политика_по_информированию_о_нарушениях.pdf'
 
   return (
     <div className={s.contactBand}>
@@ -115,6 +120,22 @@ const FooterContactBand: FC<Props> = ({ data }) => {
             </a>
           </Link>
         )}
+
+        <a
+          className={s.contactItem}
+          href={whistleblowingPolicyHref}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className={s.contactItem__icon}>
+            <DocumentIcon />
+          </span>
+          <span className={s.contactItem__text}>
+            <span className={`${s.contactItem__value} ${s.contactItem__link}`}>
+              {t('whistleblowing_policy')}
+            </span>
+          </span>
+        </a>
       </div>
 
       {/* Колонка: офис + email */}
