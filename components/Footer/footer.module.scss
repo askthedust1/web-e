@@ -1,6 +1,24 @@
 .footer {
-  padding: 32px 0;
+  padding: 24px 16px;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    padding: 12px 8px;
+  }
+}
+
+/* Скруглённая карточка футера (по макету) */
+.card {
+  max-width: 1240px;
+  margin: 0 auto;
   background-color: var(--BLUE10);
+  border-radius: 28px;
+  padding: 40px 0 32px;
+  overflow: hidden;
+
+  @media (max-width: $MAX_MOBILE_SIZE) {
+    border-radius: 20px;
+    padding: 24px 0;
+  }
 }
 .footer__grid {
   display: grid;
@@ -185,7 +203,9 @@
 
 /* ===== Тёмная тема футера (страница World Elite) ===== */
 .footer.dark {
-  background-color: $BLUE700;
+  .card {
+    background-color: $BLUE700;
+  }
 
   .title {
     color: $WHITE;

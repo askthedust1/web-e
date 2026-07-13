@@ -19,34 +19,36 @@ const Footer: FC<Props> = ({ data, contact, dark = false }) => {
   const isVisible = isMobile ? true : false
   return (
     <div className={clsx(style.footer, dark && style.dark)}>
-      <Container>
-        <div className={style.footer__grid}>
-          {!isVisible
-            ? data?.map(
-                (item) =>
-                  item.is_active && (
-                    <FooterAboutBank key={item.id} data={item} />
-                  )
-              )
-            : data?.map(
-                (item) =>
-                  item.is_active && (
-                    <SelectDropDownDefault
-                      key={item.id}
-                      data={{
-                        title: item.title,
-                        links: item.footer_links,
-                        id: item.id,
-                      }}
-                    />
-                  )
-              )}
+      <div className={style.card}>
+        <Container>
+          <div className={style.footer__grid}>
+            {!isVisible
+              ? data?.map(
+                  (item) =>
+                    item.is_active && (
+                      <FooterAboutBank key={item.id} data={item} />
+                    )
+                )
+              : data?.map(
+                  (item) =>
+                    item.is_active && (
+                      <SelectDropDownDefault
+                        key={item.id}
+                        data={{
+                          title: item.title,
+                          links: item.footer_links,
+                          id: item.id,
+                        }}
+                      />
+                    )
+                )}
 
-          <FooterContact data={contact} />
+            <FooterContact data={contact} />
+          </div>
+        </Container>
+        <div>
+          <FooterQr data={contact} />
         </div>
-      </Container>
-      <div>
-        <FooterQr data={contact} />
       </div>
     </div>
   )
