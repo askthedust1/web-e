@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Header from 'components/Header'
 import HeaderMobile from 'components/HeaderMobile'
-import Contact from 'components/Contact'
 import Footer from 'components/Footer'
 import { useRouter } from 'next/router'
 import { FORMS_ROUTES } from 'constants/form-routes'
@@ -70,7 +69,6 @@ const Layout: React.FC<Layout> = ({ children }: Layout) => {
         data={headerData}
       />
       <main id="main-content">{children}</main>
-      <Contact contact={setting} dark={isDarkTheme} />
       <Footer data={footerData} contact={setting} dark={isDarkTheme} />
     </>
   )

@@ -2,12 +2,13 @@ import { FC } from 'react'
 import clsx from 'clsx'
 import Container from 'components/Container'
 import FooterAboutBank from 'components/Footer/FooterAboutBank'
-import FooterContact from 'components/Footer/FooterContact'
 import { FooterProps, SiteSettingProps } from 'services/api/LayoutModule'
-import FooterQr from './FooterQr'
 import SelectDropDownDefault from 'components/SelectDropDownDefault'
 import { useMediaQuery } from 'react-responsive'
+import FooterBanner from './FooterBanner'
+import FooterContactBand from './FooterContactBand'
 import style from './footer.module.scss'
+
 interface Props {
   data: FooterProps[] | null
   contact: SiteSettingProps | null
@@ -17,10 +18,12 @@ interface Props {
 const Footer: FC<Props> = ({ data, contact, dark = false }) => {
   const isMobile = useMediaQuery({ maxWidth: 960 })
   const isVisible = isMobile ? true : false
+
   return (
     <div className={clsx(style.footer, dark && style.dark)}>
       <div className={style.card}>
         <Container>
+          {/* Верх — колонки ссылок */}
           <div className={style.footer__grid}>
             {!isVisible
               ? data?.map(
@@ -42,13 +45,14 @@ const Footer: FC<Props> = ({ data, contact, dark = false }) => {
                       />
                     )
                 )}
-
-            <FooterContact data={contact} />
           </div>
+
+          {/* Баннер приложения */}
+          <FooterBanner data={contact} />
+
+          {/* Низ — строка контактов */}
+          <FooterContactBand data={contact} />
         </Container>
-        <div>
-          <FooterQr data={contact} />
-        </div>
       </div>
     </div>
   )

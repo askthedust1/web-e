@@ -22,7 +22,7 @@
 }
 .footer__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
   @media (max-width: 960px) {
     grid-template-columns: repeat(1, 1fr);
@@ -227,5 +227,187 @@
   }
   .subLinkBlue {
     color: $BLUE_SKY;
+  }
+}
+
+/* ===== Баннер приложения ===== */
+.banner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 40px;
+  padding: 0;
+  min-height: 220px;
+  border-radius: 24px;
+  background: #2b3442;
+  overflow: hidden;
+
+  @media (max-width: $BREAK_POINT_SIZE) {
+    flex-direction: column;
+    text-align: center;
+    min-height: unset;
+    padding: 28px 20px;
+    gap: 20px;
+  }
+}
+.banner__media {
+  /* Место под изображение телефонов (добавляется отдельно) */
+  flex: 0 0 42%;
+  align-self: stretch;
+  min-height: 220px;
+
+  @media (max-width: $BREAK_POINT_SIZE) {
+    display: none;
+  }
+}
+.banner__content {
+  flex: 1 1 auto;
+  padding: 32px 48px 32px 0;
+
+  @media (max-width: $BREAK_POINT_SIZE) {
+    padding: 0;
+  }
+}
+.banner__title {
+  color: $WHITE;
+  margin-bottom: 24px;
+}
+.banner__apps {
+  display: flex;
+  gap: 16px;
+
+  @media (max-width: $BREAK_POINT_SIZE) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+.banner__app {
+  display: inline-flex;
+  img {
+    display: block;
+    height: 48px;
+    width: auto;
+  }
+}
+
+/* ===== Нижняя строка контактов ===== */
+.contactBand {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  align-items: start;
+  gap: 40px;
+  margin-top: 40px;
+
+  @media (max-width: $BREAK_POINT_SIZE) {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+.contactBand__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.support {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: $BLUE900;
+}
+.support__icon {
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+}
+.support__num {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  .support__small {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  b {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+}
+.socials {
+  display: flex;
+  gap: 12px;
+}
+.social {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid $BLUE900;
+  color: $BLUE900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  transition: 0.2s;
+  &:hover {
+    opacity: 0.65;
+  }
+}
+.contactBand__col {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+.contactItem__icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: $BLUE700;
+  color: $WHITE;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px;
+}
+.contactItem__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.contactItem__label {
+  font-size: 14px;
+  color: $BLUE400;
+}
+.contactItem__value {
+  font-size: 16px;
+  color: $BLACK;
+}
+
+/* ===== Тёмная тема: баннер и контакты ===== */
+.footer.dark {
+  .banner {
+    background: #1f2732;
+  }
+  .support {
+    color: $WHITE;
+  }
+  .social {
+    border-color: $BLUE150;
+    color: $BLUE150;
+  }
+  .contactItem__icon {
+    background: rgba(255, 255, 255, 0.12);
+  }
+  .contactItem__label {
+    color: $BLUE200;
+  }
+  .contactItem__value {
+    color: $WHITE;
   }
 }
