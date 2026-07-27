@@ -181,91 +181,21 @@ $muted: #8a94a6;
   }
 }
 
-.heroMeta {
+.heroInfo {
+  align-self: flex-start;
+  flex: 0 0 auto;
   margin-top: auto;
   padding-top: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: flex-start;
-}
+  height: auto;
+  width: auto;
+  max-width: min(440px, 90%);
+  object-fit: contain;
+  filter: none !important;
+  -webkit-filter: none !important;
 
-.metaRow {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.metaPill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #fff;
-  color: $ink;
-  font-weight: 700;
-  font-size: 18px;
-  padding: 6px 8px;
-  border-radius: 999px;
-}
-
-.metaCircle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  background: $ink;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 15px;
-  font-weight: 800;
-}
-
-.metaGreen {
-  background: $green;
-  color: $ink;
-  padding: 6px 16px;
-  border-radius: 999px;
-  font-weight: 700;
-}
-
-.metaArrow {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #fff;
-  color: $ink;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.metaYellow {
-  background: $yellow;
-  padding: 10px 22px;
-  font-weight: 800;
-}
-
-.metaDark {
-  background: $ink;
-  color: #fff;
-  padding: 10px 22px;
-  font-weight: 700;
-}
-
-.metaCircleDark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: $ink;
-  color: #fff;
-  font-size: 16px;
+  @media (max-width: 640px) {
+    max-width: 100%;
+  }
 }
 
 /* =================== ABOUT =================== */

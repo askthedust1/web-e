@@ -209,24 +209,11 @@ const Kelechek: NextPage = () => {
             className={s.heroBadge}
           />
 
-          <div className={s.heroMeta}>
-            <div className={s.metaRow}>
-              <span className={s.metaPill}>
-                <span className={s.metaCircle}>25</span>
-                <span className={s.metaGreen}>Сентября</span>
-              </span>
-              <span className={s.metaArrow}>→</span>
-              <span className={`${s.metaPill} ${s.metaYellow}`}>
-                10:00–17:00
-              </span>
-            </div>
-            <div className={s.metaRow}>
-              <span className={`${s.metaPill} ${s.metaDark}`}>
-                Novotel Bishkek
-              </span>
-              <span className={s.metaCircleDark}>◉</span>
-            </div>
-          </div>
+          <img
+            src="/images/kelechek/info.png"
+            alt="25 Сентября, 10:00–17:00, Novotel Bishkek"
+            className={s.heroInfo}
+          />
         </div>
       </section>
 
