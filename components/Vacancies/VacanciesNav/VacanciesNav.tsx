@@ -13,6 +13,7 @@ const VacanciesNav = () => {
     { href: '/vacancies/job-list', label: t('job.vacancies_nav.vacancies') },
     { href: '/vacancies/stories', label: t('job.vacancies_nav.stories') },
     { href: '/vacancies/to-students', label: t('job.vacancies_nav.students') },
+    { href: '/vacancies/kelechek', label: 'Kelechek' },
     { href: '/vacancies/resume', label: t('resume_title') },
   ]
 

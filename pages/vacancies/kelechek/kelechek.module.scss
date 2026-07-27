@@ -1,0 +1,878 @@
+// KELECHEK 2026 landing — Eldik Bank × Beeline internship
+$blue: #156ce6;
+$blue-dark: #0f52be;
+$yellow: #ffe23d;
+$green: #8be04a;
+$ink: #13161b;
+$muted: #8a94a6;
+
+.page {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: inherit;
+  color: $ink;
+}
+
+/* =================== HERO =================== */
+.hero {
+  position: relative;
+  background: $ink;
+  color: #fff;
+  padding: 24px 40px 90px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 20px 16px 60px;
+  }
+}
+
+.heroShapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.shape {
+  position: absolute;
+  display: block;
+}
+
+.shapeStar {
+  width: 120px;
+  height: 120px;
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 68% 57%,
+    79% 91%, 50% 70%, 21% 91%, 32% 57%,
+    2% 35%, 39% 35%
+  );
+}
+
+.starYellow {
+  background: $yellow;
+  top: 40px;
+  right: 22%;
+  transform: rotate(12deg);
+}
+
+.starGreen {
+  background: $green;
+  width: 90px;
+  height: 90px;
+  bottom: 60px;
+  right: 8%;
+  transform: rotate(-8deg);
+}
+
+.shapeBlue {
+  width: 260px;
+  height: 260px;
+  background: $blue;
+  top: -40px;
+  right: -40px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.shapeYellowSquare {
+  width: 46px;
+  height: 46px;
+  background: $yellow;
+  bottom: 120px;
+  left: 6%;
+  transform: rotate(20deg);
+}
+
+.topbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.topNav {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.topNavLink {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+
+  &:hover { opacity: 1; }
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.participateBtn {
+  background: $yellow;
+  color: $ink;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.2s;
+
+  &:hover { transform: translateY(-1px); }
+}
+
+.langSwitch {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.langActive { color: $yellow; }
+
+.heroLogos {
+  position: relative;
+  z-index: 2;
+  margin-top: 26px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.eldikLogo { font-size: 16px; }
+.logoCross { opacity: 0.5; font-weight: 400; }
+.beelineLogo { font-size: 18px; }
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  margin-top: 40px;
+}
+
+.heroBadge {
+  display: inline-block;
+  background: $blue;
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1;
+  padding: 10px 14px;
+  border-radius: 6px;
+  transform: skewX(-6deg);
+}
+
+.heroTitle {
+  margin: 24px 0 0;
+  font-size: clamp(48px, 12vw, 150px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -2px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.heroYear {
+  color: $yellow;
+  font-size: clamp(40px, 9vw, 110px);
+}
+
+.heroMeta {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.metaPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: $yellow;
+  color: $ink;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px 16px 8px 8px;
+  border-radius: 999px;
+}
+
+.metaIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 26px;
+  height: 26px;
+  padding: 0 6px;
+  background: $ink;
+  color: $yellow;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =================== ABOUT =================== */
+.about {
+  background: #fff;
+  padding: 80px 40px;
+
+  @media (max-width: 768px) {
+    padding: 48px 16px;
+  }
+}
+
+.aboutInner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.sectionTitleDark {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 900;
+  color: $ink;
+  margin: 0;
+}
+
+.aboutLead {
+  font-size: 18px;
+  font-weight: 700;
+  color: $blue;
+  margin: 8px 0 20px;
+}
+
+.aboutText {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4c5c75;
+  margin: 0 0 14px;
+  max-width: 460px;
+}
+
+.joinCard {
+  position: relative;
+  overflow: hidden;
+  margin-top: 28px;
+  background: $blue;
+  border-radius: 20px;
+  padding: 34px 30px;
+  color: #fff;
+}
+
+.joinBlob {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.joinBlobTop {
+  width: 90px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.14);
+  top: -20px;
+  right: 30px;
+}
+
+.joinBlobBottom {
+  width: 70px;
+  height: 70px;
+  background: $green;
+  opacity: 0.9;
+  bottom: -24px;
+  left: -20px;
+}
+
+.joinLabel {
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0 0 12px;
+}
+
+.joinTitle {
+  position: relative;
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: 900;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.joinHighlight {
+  background: $yellow;
+  color: $ink;
+  padding: 0 8px;
+  border-radius: 4px;
+}
+
+.aboutRight {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.collage {
+  position: relative;
+  background: linear-gradient(135deg, $blue 0%, $blue-dark 100%);
+  border-radius: 20px;
+  min-height: 260px;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.collagePhoto {
+  height: 200px;
+  border-radius: 12px;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.08) 0 14px,
+      rgba(255, 255, 255, 0.03) 14px 28px
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+}
+
+.inspired {
+  position: absolute;
+  left: 24px;
+  bottom: 20px;
+  font-weight: 900;
+  font-size: 26px;
+  color: $green;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.learnBadge {
+  background: $yellow;
+  color: $ink;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.advantagesList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.advItem {
+  background: #f1f2f5;
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.advTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: $ink;
+}
+
+.advText {
+  font-size: 12px;
+  line-height: 1.5;
+  color: $muted;
+  margin: 0;
+}
+
+.registerBtn {
+  display: block;
+  max-width: 1120px;
+  margin: 40px auto 0;
+  background: $blue;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  padding: 18px;
+  border-radius: 12px;
+  transition: background 0.2s;
+
+  &:hover { background: $blue-dark; }
+}
+
+/* =================== DIRECTIONS =================== */
+.directions {
+  background: $ink;
+  padding: 70px 40px;
+
+  @media (max-width: 768px) {
+    padding: 48px 16px;
+  }
+}
+
+.directionsInner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.directionsHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 34px;
+  flex-wrap: wrap;
+}
+
+.sectionTitleLight {
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+}
+
+.seeAllBtn {
+  background: $blue;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s;
+
+  &:hover { background: $blue-dark; }
+}
+
+.directionsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dirCard {
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.dirCardBlue { background: $blue; }
+.dirCardGreen { background: $green; }
+
+.dirTitle {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+  padding: 28px 26px 34px;
+  color: #fff;
+
+  .dirCardGreen & { color: $ink; }
+}
+
+.dirBody {
+  background: #fff;
+  padding: 24px 26px 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dirSubtitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: $ink;
+  margin: 0 0 12px;
+}
+
+.dirDesc {
+  font-size: 12px;
+  line-height: 1.6;
+  color: $muted;
+  margin: 0 0 20px;
+  flex: 1;
+}
+
+.dirLink {
+  font-size: 14px;
+  font-weight: 700;
+  color: $ink;
+  text-decoration: none;
+
+  &:hover { color: $blue; }
+}
+
+/* =================== MARQUEE =================== */
+.marquee {
+  background: $yellow;
+  transform: rotate(-2.5deg);
+  margin: 40px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marqueeTrack {
+  display: inline-flex;
+  animation: kelechekMarquee 22s linear infinite;
+}
+
+.marqueeItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 22px;
+  font-weight: 900;
+  color: $ink;
+  padding: 16px 18px;
+  letter-spacing: 1px;
+}
+
+.marqueeDot {
+  font-size: 10px;
+  color: $blue;
+}
+
+@keyframes kelechekMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* =================== STORIES =================== */
+.stories {
+  background: #fff;
+  padding: 70px 40px;
+
+  @media (max-width: 768px) {
+    padding: 48px 16px;
+  }
+}
+
+.storiesInner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.storiesTitle {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.storiesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.storyCard {
+  display: flex;
+  gap: 18px;
+  background: #fff;
+  border: 1px solid #eef0f4;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 8px 30px rgba(21, 108, 230, 0.06);
+}
+
+.storyCardFeatured {
+  background: $blue;
+  border-color: $blue;
+
+  .storyName, .storyBody { color: #fff; }
+}
+
+.storyText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.storyName {
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  color: $ink;
+}
+
+.storyBody {
+  font-size: 12px;
+  line-height: 1.6;
+  color: $muted;
+  margin: 0 0 16px;
+  flex: 1;
+}
+
+.storyLink {
+  font-size: 13px;
+  font-weight: 700;
+  color: $blue;
+  text-decoration: none;
+}
+
+.storyPhoto {
+  width: 120px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, $yellow 0%, $green 100%);
+
+  @media (max-width: 480px) {
+    display: none;
+  }
+}
+
+/* =================== PRODUCTS =================== */
+.products {
+  background: #fff;
+  padding: 40px 40px 80px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 24px 16px 56px;
+  }
+}
+
+.productsTitle {
+  max-width: 720px;
+  margin: 0 auto 44px;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 900;
+  line-height: 1.15;
+  color: $ink;
+}
+
+.productsHighlight {
+  background: $yellow;
+  padding: 0 6px;
+  border-radius: 4px;
+}
+
+.productsRow {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.productItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 90px;
+}
+
+.productLogo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: $ink;
+  color: $yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.productLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: $ink;
+}
+
+/* =================== FAQ =================== */
+.faq {
+  background: #f1f2f5;
+  padding: 70px 40px;
+
+  @media (max-width: 768px) {
+    padding: 48px 16px;
+  }
+}
+
+.faqInner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.faqTitle {
+  text-align: center;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 900;
+  color: $ink;
+  margin: 0 0 34px;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faqItem {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.faqHead {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 22px 26px;
+  font-size: 15px;
+  font-weight: 700;
+  color: $ink;
+  text-align: left;
+}
+
+.faqArrow {
+  color: $blue;
+  font-size: 20px;
+  transition: transform 0.25s;
+}
+
+.faqItemOpen .faqArrow {
+  transform: rotate(90deg);
+}
+
+.faqBody {
+  padding: 0 26px 24px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: $muted;
+}
+
+/* =================== FOOTER =================== */
+.footer {
+  position: relative;
+  background: $ink;
+  color: #fff;
+  padding: 80px 40px 60px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 56px 16px 48px;
+  }
+}
+
+.footerShapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.footerGreen1 {
+  width: 200px;
+  height: 200px;
+  background: $green;
+  bottom: -80px;
+  left: -40px;
+  clip-path: polygon(0 100%, 100% 100%, 0 0);
+  opacity: 0.9;
+}
+
+.footerGreen2 {
+  width: 160px;
+  height: 160px;
+  background: $blue;
+  bottom: -60px;
+  right: -30px;
+  clip-path: polygon(100% 100%, 0 100%, 100% 0);
+}
+
+.footerTop {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.footerHeading {
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 900;
+  line-height: 1.05;
+  margin: 0 0 20px;
+}
+
+.footerMail {
+  color: $blue;
+  font-size: clamp(22px, 4vw, 40px);
+  font-weight: 900;
+  text-decoration: none;
+
+  &:hover { text-decoration: underline; }
+}
+
+.footerCols {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 40px;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.footerCol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footerColHead {
+  font-weight: 700;
+  color: #fff;
+}
