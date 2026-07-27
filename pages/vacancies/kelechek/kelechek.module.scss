@@ -16,209 +16,236 @@ $muted: #8a94a6;
 /* =================== HERO =================== */
 .hero {
   position: relative;
-  background: $ink;
-  color: #fff;
-  padding: 24px 40px 90px;
-  overflow: hidden;
-
-  @media (max-width: 768px) {
-    padding: 20px 16px 60px;
-  }
-}
-
-.heroShapes {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.shape {
-  position: absolute;
-  display: block;
-}
-
-.shapeStar {
-  width: 120px;
-  height: 120px;
-  clip-path: polygon(
-    50% 0%, 61% 35%, 98% 35%, 68% 57%,
-    79% 91%, 50% 70%, 21% 91%, 32% 57%,
-    2% 35%, 39% 35%
-  );
-}
-
-.starYellow {
-  background: $yellow;
-  top: 40px;
-  right: 22%;
-  transform: rotate(12deg);
-}
-
-.starGreen {
-  background: $green;
-  width: 90px;
-  height: 90px;
-  bottom: 60px;
-  right: 8%;
-  transform: rotate(-8deg);
-}
-
-.shapeBlue {
-  width: 260px;
-  height: 260px;
-  background: $blue;
-  top: -40px;
-  right: -40px;
-  clip-path: polygon(0 0, 100% 0, 100% 100%);
-}
-
-.shapeYellowSquare {
-  width: 46px;
-  height: 46px;
-  background: $yellow;
-  bottom: 120px;
-  left: 6%;
-  transform: rotate(20deg);
+  background: #fff;
 }
 
 .topbar {
-  position: relative;
-  z-index: 2;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
+  gap: 32px;
+  padding: 16px 40px;
+  background: #fff;
+
+  @media (max-width: 1024px) {
+    gap: 20px;
+    padding: 14px 20px;
+    flex-wrap: wrap;
+  }
+}
+
+.topLogo {
+  height: 44px;
+  width: auto;
+  flex-shrink: 0;
 }
 
 .topNav {
   display: flex;
-  gap: 28px;
+  gap: 34px;
+  flex: 1;
   flex-wrap: wrap;
+
+  @media (max-width: 1024px) {
+    gap: 18px;
+    order: 3;
+    width: 100%;
+  }
 }
 
 .topNavLink {
-  color: #fff;
-  font-size: 14px;
+  color: $ink;
+  font-size: 15px;
   font-weight: 500;
   text-decoration: none;
-  opacity: 0.9;
-  transition: opacity 0.2s;
+  transition: color 0.2s;
 
-  &:hover { opacity: 1; }
+  &:hover { color: $blue; }
+}
+
+.topNavActive {
+  color: $blue;
+  font-weight: 600;
 }
 
 .topRight {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 22px;
+  margin-left: auto;
 }
 
 .participateBtn {
-  background: $yellow;
-  color: $ink;
-  font-weight: 700;
-  font-size: 14px;
-  padding: 10px 20px;
-  border-radius: 999px;
+  background: $blue;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 30px;
+  border-radius: 8px;
   text-decoration: none;
-  transition: transform 0.2s;
+  transition: background 0.2s;
 
-  &:hover { transform: translateY(-1px); }
+  &:hover { background: $blue-dark; }
 }
 
 .langSwitch {
   display: flex;
-  gap: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.langActive { color: $yellow; }
-
-.heroLogos {
-  position: relative;
-  z-index: 2;
-  margin-top: 26px;
-  display: flex;
   align-items: center;
-  gap: 14px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: $ink;
 }
 
-.eldikLogo { font-size: 16px; }
-.logoCross { opacity: 0.5; font-weight: 400; }
-.beelineLogo { font-size: 18px; }
+.langActive { color: $blue; }
+.langDivider { color: #c4ccd6; font-weight: 400; }
 
-.heroContent {
+.heroBanner {
   position: relative;
-  z-index: 2;
-  margin-top: 40px;
+  background: #000 url('/images/kelechek/bg_hero.png') center / cover no-repeat;
+  padding: 56px 64px 64px;
+  min-height: 620px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1024px) {
+    padding: 40px 24px 48px;
+    min-height: 480px;
+  }
+  @media (max-width: 640px) {
+    padding: 28px 16px 36px;
+    background-size: cover;
+    background-position: 70% center;
+    min-height: 420px;
+  }
 }
 
-.heroBadge {
-  display: inline-block;
-  background: $blue;
-  color: #fff;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 1;
-  padding: 10px 14px;
-  border-radius: 6px;
-  transform: skewX(-6deg);
+.heroBrand {
+  height: 56px;
+  width: auto;
+
+  @media (max-width: 640px) {
+    height: 40px;
+  }
 }
 
 .heroTitle {
-  margin: 24px 0 0;
-  font-size: clamp(48px, 12vw, 150px);
+  margin: 60px 0 0;
+  font-size: clamp(56px, 12vw, 150px);
   font-weight: 900;
-  line-height: 0.9;
+  line-height: 0.86;
   letter-spacing: -2px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  gap: 16px;
+  color: #fff;
+  text-transform: uppercase;
+
+  @media (max-width: 1024px) {
+    margin-top: 32px;
+  }
 }
 
 .heroYear {
-  color: $yellow;
-  font-size: clamp(40px, 9vw, 110px);
+  display: block;
+  margin-top: 4px;
+  padding-left: clamp(120px, 22vw, 300px);
+  color: #fff;
+  font-size: clamp(44px, 9vw, 118px);
+}
+
+.heroBadge {
+  height: clamp(88px, 12vw, 132px);
+  width: auto;
+  margin: 28px 0 0;
+
+  @media (max-width: 640px) {
+    height: 72px;
+  }
 }
 
 .heroMeta {
-  margin-top: 40px;
+  margin-top: auto;
+  padding-top: 40px;
   display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   flex-wrap: wrap;
-  gap: 14px;
 }
 
 .metaPill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: $yellow;
+  background: #fff;
   color: $ink;
   font-weight: 700;
-  font-size: 14px;
-  padding: 8px 16px 8px 8px;
+  font-size: 18px;
+  padding: 6px 8px;
   border-radius: 999px;
 }
 
-.metaIcon {
+.metaCircle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 26px;
-  height: 26px;
-  padding: 0 6px;
+  width: 34px;
+  height: 34px;
   background: $ink;
-  color: $yellow;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.metaGreen {
+  background: $green;
+  color: $ink;
+  padding: 6px 16px;
   border-radius: 999px;
-  font-size: 12px;
   font-weight: 700;
+}
+
+.metaArrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  color: $ink;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.metaYellow {
+  background: $yellow;
+  padding: 10px 22px;
+  font-weight: 800;
+}
+
+.metaDark {
+  background: $ink;
+  color: #fff;
+  padding: 10px 22px;
+  font-weight: 700;
+}
+
+.metaCircleDark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: $ink;
+  color: #fff;
+  font-size: 16px;
 }
 
 /* =================== ABOUT =================== */

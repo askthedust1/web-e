@@ -162,17 +162,19 @@ const Kelechek: NextPage = () => {
     <div className={s.page}>
       {/* ================= HERO ================= */}
       <section id="hero" className={s.hero}>
-        <div className={s.heroShapes} aria-hidden>
-          <span className={`${s.shape} ${s.shapeStar} ${s.starYellow}`} />
-          <span className={`${s.shape} ${s.shapeStar} ${s.starGreen}`} />
-          <span className={`${s.shape} ${s.shapeBlue}`} />
-          <span className={`${s.shape} ${s.shapeYellowSquare}`} />
-        </div>
-
         <header className={s.topbar}>
+          <img
+            src="/images/kelechek/logo_kelechek.png"
+            alt="Kelechek"
+            className={s.topLogo}
+          />
           <nav className={s.topNav}>
-            {navLinks.map((l) => (
-              <a key={l.label} href={l.href} className={s.topNavLink}>
+            {navLinks.map((l, i) => (
+              <a
+                key={l.label}
+                href={l.href}
+                className={`${s.topNavLink} ${i === 0 ? s.topNavActive : ''}`}
+              >
                 {l.label}
               </a>
             ))}
@@ -183,38 +185,47 @@ const Kelechek: NextPage = () => {
             </a>
             <div className={s.langSwitch}>
               <span className={s.langActive}>RU</span>
+              <span className={s.langDivider}>|</span>
               <span>KY</span>
             </div>
           </div>
         </header>
 
-        <div className={s.heroLogos}>
-          <span className={s.eldikLogo}>ЭЛДИК БАНК</span>
-          <span className={s.logoCross}>×</span>
-          <span className={s.beelineLogo}>Beeline</span>
-        </div>
+        <div className={s.heroBanner}>
+          <img
+            src="/images/kelechek/logo_bee_eldik.png"
+            alt="Эльдик Банк × Beeline"
+            className={s.heroBrand}
+          />
 
-        <div className={s.heroContent}>
-          <span className={s.heroBadge}>
-            KELE
-            <br />
-            CHEK
-          </span>
           <h1 className={s.heroTitle}>
             KELECHEK
             <span className={s.heroYear}>2026</span>
           </h1>
 
+          <img
+            src="/images/kelechek/logo_kelechek.png"
+            alt="Kelechek"
+            className={s.heroBadge}
+          />
+
           <div className={s.heroMeta}>
-            <span className={s.metaPill}>
-              <span className={s.metaIcon}>25</span> Сентября
-            </span>
-            <span className={s.metaPill}>
-              <span className={s.metaIcon}>◷</span> 10:00–17:00
-            </span>
-            <span className={s.metaPill}>
-              <span className={s.metaIcon}>◉</span> Novotel Bishkek
-            </span>
+            <div className={s.metaRow}>
+              <span className={s.metaPill}>
+                <span className={s.metaCircle}>25</span>
+                <span className={s.metaGreen}>Сентября</span>
+              </span>
+              <span className={s.metaArrow}>→</span>
+              <span className={`${s.metaPill} ${s.metaYellow}`}>
+                10:00–17:00
+              </span>
+            </div>
+            <div className={s.metaRow}>
+              <span className={`${s.metaPill} ${s.metaDark}`}>
+                Novotel Bishkek
+              </span>
+              <span className={s.metaCircleDark}>◉</span>
+            </div>
           </div>
         </div>
       </section>
