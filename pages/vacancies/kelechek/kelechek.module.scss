@@ -37,6 +37,9 @@ $muted: #8a94a6;
   height: 44px;
   width: auto;
   flex-shrink: 0;
+  object-fit: contain;
+  filter: none !important;
+  -webkit-filter: none !important;
 }
 
 .topNav {
@@ -121,20 +124,28 @@ $muted: #8a94a6;
 }
 
 .heroBrand {
-  height: 56px;
+  align-self: flex-start;
+  flex: 0 0 auto;
+  height: 52px;
   width: auto;
+  max-width: 340px;
+  object-fit: contain;
+  filter: none !important;
+  -webkit-filter: none !important;
 
   @media (max-width: 640px) {
-    height: 40px;
+    height: 38px;
   }
 }
 
 .heroTitle {
-  margin: 60px 0 0;
-  font-size: clamp(56px, 12vw, 150px);
-  font-weight: 900;
+  align-self: flex-start;
+  margin: 56px 0 0;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: clamp(52px, 11vw, 140px);
+  font-weight: 800;
   line-height: 0.86;
-  letter-spacing: -2px;
+  letter-spacing: -3px;
   color: #fff;
   text-transform: uppercase;
 
@@ -145,19 +156,28 @@ $muted: #8a94a6;
 
 .heroYear {
   display: block;
-  margin-top: 4px;
-  padding-left: clamp(120px, 22vw, 300px);
+  margin-top: 6px;
+  padding-left: clamp(120px, 24vw, 320px);
   color: #fff;
-  font-size: clamp(44px, 9vw, 118px);
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 800;
+  font-style: italic;
+  font-size: clamp(42px, 8.5vw, 112px);
 }
 
 .heroBadge {
-  height: clamp(88px, 12vw, 132px);
+  align-self: flex-start;
+  flex: 0 0 auto;
+  height: clamp(96px, 11vw, 128px);
   width: auto;
-  margin: 28px 0 0;
+  max-width: 240px;
+  object-fit: contain;
+  margin: 26px 0 0;
+  filter: none !important;
+  -webkit-filter: none !important;
 
   @media (max-width: 640px) {
-    height: 72px;
+    height: 76px;
   }
 }
 
